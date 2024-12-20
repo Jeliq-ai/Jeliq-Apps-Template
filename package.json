@@ -1,6 +1,7 @@
 {
   "name": "Jeliq-App-Template",
   "version": "0.0.1",
+  "revision": "1",
   "private": true,
   "scripts": {
     "test": "jest",
