@@ -4,7 +4,7 @@ import withProvider from './withProvider';
 import { initialize, mswLoader } from 'msw-storybook-addon';
 import { mswHandlers } from '@core';
 import openAPISchema from '../src/services/api/schema.json';
-import '../web/globals.css';
+import '../app/globals.css';
 
 initialize(); // Initialize MSW
 

@@ -188,9 +188,7 @@ $ pnpm run:web
 │   └── openapi-config.json              # OpenAPI configuration using for gen:api:cli
 │
 ├── web/                                 # Web front-end (Next.js) directory
-│   ├── BaseLayout.tsx                   # Base layout component
-│   ├── Providers.tsx                    # Providers
-│   └── globals.css                      # Global styles (tailwind CSS)
+│   └── Providers.tsx                    # Providers
 │
 ├── app/                                 # Next.js app directory auto-generated from Jeliq routing configurations
 │
