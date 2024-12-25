@@ -1,7 +1,13 @@
 {
   "name": "Jeliq-App-Template",
   "version": "0.0.1",
-  "revision": "1",
+  "jeliq": {
+    "template": {
+      "repository": "https://github.com/Jeliq-ai/Jeliq-Apps-Template.git",
+      "branch": "main-r1",
+      "version": "1.0.3"
+    }
+  },
   "private": true,
   "scripts": {
     "test": "jest",
@@ -22,9 +28,9 @@
     "dev:api": "nodemon --config ./api/nodemon.json"
   },
   "dependencies": {
-    "@backend": "npm:@jeliq/app-sdk-backend-supabase@^1.0.3",
-    "@core": "npm:@jeliq/app-sdk-core@^1.0.7",
-    "@router": "npm:@jeliq/app-sdk-next-router@^1.0.8",
+    "@backend": "npm:@jeliq/app-sdk-backend-supabase@^1.0.5",
+    "@core": "npm:@jeliq/app-sdk-core@^1.0.11",
+    "@router": "npm:@jeliq/app-sdk-next-router@^1.0.11",
     "autoprefixer": "^10.4.20",
     "body-parser": "^1.20.3",
     "cookie-parser": "^1.4.6",
