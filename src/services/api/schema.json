@@ -126,6 +126,7 @@
         "in": "header",
         "description": "Authentication token",
         "required": false,
+        "allowEmptyValue": true,
         "schema": {
           "type": "string"
         }
@@ -135,6 +136,7 @@
         "in": "query",
         "description": "A query parameter for search keywords.",
         "required": false,
+        "allowEmptyValue": true,
         "schema": {
           "type": "string",
           "nullable": true,
@@ -146,6 +148,7 @@
         "in": "query",
         "description": "A query parameter for specifying the page number of the results.",
         "required": false,
+        "allowEmptyValue": true,
         "schema": {
           "type": "integer",
           "nullable": true,
@@ -157,6 +160,7 @@
         "in": "query",
         "description": "A query parameter for specifying the maximum number of results per page.",
         "required": false,
+        "allowEmptyValue": true,
         "schema": {
           "type": "integer",
           "nullable": true,
@@ -168,6 +172,7 @@
         "in": "query",
         "description": "A query parameter for specifying the field name by which the results should be ordered.",
         "required": false,
+        "allowEmptyValue": true,
         "schema": {
           "type": "string",
           "nullable": true,
@@ -179,6 +184,7 @@
         "in": "query",
         "description": "A query parameter for specifying the sorting order of the results (ascending or descending).",
         "required": false,
+        "allowEmptyValue": true,
         "schema": {
           "type": "boolean",
           "nullable": true,
