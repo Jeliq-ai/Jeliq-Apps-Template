@@ -4,6 +4,11 @@
     "version": "1.0.0",
     "title": "Jenify App Backend API"
   },
+  "security": [
+    {
+      "Authorization": []
+    }
+  ],
   "tags": [
   ],
   "servers": [
@@ -14,6 +19,14 @@
   "paths": {
   },
   "components": {
+    "securitySchemes": {
+      "Authorization": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "description": "JWT認証トークンをAuthorizationヘッダーに指定してください"
+      }
+    },
     "responses": {
       "Error400": {
         "description": "The JSON format is invalid or a validation error occurred.",
