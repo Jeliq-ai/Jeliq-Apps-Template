@@ -10,14 +10,14 @@ overrides:
 
 dependencies:
   '@backend':
-    specifier: npm:@jeliq/app-sdk-backend-supabase@^1.0.3
-    version: /@jeliq/app-sdk-backend-supabase@1.0.3(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+    specifier: npm:@jeliq/app-sdk-backend-supabase@^1.1.0
+    version: /@jeliq/app-sdk-backend-supabase@1.1.0(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
   '@core':
-    specifier: npm:@jeliq/app-sdk-core@^1.0.7
-    version: /@jeliq/app-sdk-core@1.0.7(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+    specifier: npm:@jeliq/app-sdk-core@^1.1.0
+    version: /@jeliq/app-sdk-core@1.1.0(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
   '@router':
-    specifier: npm:@jeliq/app-sdk-next-router@^1.0.8
-    version: /@jeliq/app-sdk-next-router@1.0.8(@babel/core@7.26.0)(@echopf/sdk@2.1.5)(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+    specifier: npm:@jeliq/app-sdk-next-router@^1.1.0
+    version: /@jeliq/app-sdk-next-router@1.1.0(@babel/core@7.26.0)(@echopf/sdk@2.1.5)(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
   autoprefixer:
     specifier: ^10.4.20
     version: 10.4.20(postcss@8.4.49)
@@ -2025,10 +2025,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /@jeliq/app-sdk-backend-supabase@1.0.3(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
-    resolution: {integrity: sha512-Bq0CkZPznafzhIOcxfEfr5lqbqG6CWpvG79Dc2YmNhgHqn4KYpODz3294fOLDrORktkNyYA1eAP5Xv9WZ31HNg==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-backend-supabase/-/app-sdk-backend-supabase-1.0.3.tgz}
+  /@jeliq/app-sdk-backend-supabase@1.1.0(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
+    resolution: {integrity: sha512-i6FWC4DbYxJ20xUhtvwlhG4QyFMDbCMf6dmgO5XStScggr8hUT3f/lxBYUE0zw3GkmCGqDTp1k9mUlXV9GYgeA==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-backend-supabase/-/app-sdk-backend-supabase-1.1.0.tgz}
     dependencies:
-      '@jeliq/app-sdk-core': 1.0.7(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+      '@jeliq/app-sdk-core': 1.1.0(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
       '@supabase/postgrest-js': 1.17.6
       '@supabase/supabase-js': 2.46.1
       dayjs: 1.11.13
@@ -2042,8 +2042,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@jeliq/app-sdk-core@1.0.7(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
-    resolution: {integrity: sha512-KFvcnoZtN2xJUcWbU+tFXewpbeelkqZFXdTZB/FdMkqUl9AXy1mgzI3jo9/NkxWh28hV6kWPQMWw+UqZoTUm2g==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-core/-/app-sdk-core-1.0.7.tgz}
+  /@jeliq/app-sdk-core@1.1.0(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
+    resolution: {integrity: sha512-agGcd4104xSMp4MzMw4/nGFOPzxzIcSVn4zJrYTVv5sITeCPOuOt/QicBilP12Zvf2Po5J+rbh+Kc9kuEYszUA==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-core/-/app-sdk-core-1.1.0.tgz}
     hasBin: true
     requiresBuild: true
     peerDependencies:
@@ -2064,8 +2064,8 @@ packages:
       - typescript
     dev: false
 
-  /@jeliq/app-sdk-next-router@1.0.8(@babel/core@7.26.0)(@echopf/sdk@2.1.5)(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
-    resolution: {integrity: sha512-E+bJEnMl9N5bzq1+I/uITTIkT0fifiPXGZaqaEWCmyZ+EC0jXPWDrnQ2ekbhaYgut8papC6CNpJYRdC+BqtEzA==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-next-router/-/app-sdk-next-router-1.0.8.tgz}
+  /@jeliq/app-sdk-next-router@1.1.0(@babel/core@7.26.0)(@echopf/sdk@2.1.5)(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
+    resolution: {integrity: sha512-0DG45vPX6E303vXD00Fm25xkY2Ntou3ldHlAyJ/BNinuX+OJ+bkb4nF4QcGqb7RGbKgSd+90wE65n8jMZQ9vFw==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-next-router/-/app-sdk-next-router-1.1.0.tgz}
     hasBin: true
     requiresBuild: true
     peerDependencies:
@@ -2073,7 +2073,7 @@ packages:
       react: ^18.3.1
     dependencies:
       '@echopf/sdk': 2.1.5
-      '@jeliq/app-sdk-core': 1.0.7(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+      '@jeliq/app-sdk-core': 1.1.0(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
       lodash: 4.17.21
       next: 14.2.18(@babel/core@7.26.0)(react-dom@18.3.1)(react@18.3.1)
       react: 18.3.1
