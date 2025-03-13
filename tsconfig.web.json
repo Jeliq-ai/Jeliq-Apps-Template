@@ -30,6 +30,7 @@
   "exclude": [
     "./api/**/*",
     "./src/services/api/**/*",
+    "./src/infra/api/controllers/**/*",
     "node_modules",
     "babel.config.js",
     "metro.config.js",

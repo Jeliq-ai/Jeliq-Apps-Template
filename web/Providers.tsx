@@ -12,7 +12,7 @@ import {
   MessageProvider,
 } from '@core';
 import { NavigationProvider, useNavigation } from '@router';
-import * as dataModels from '@/src/data/schema';
+import * as dataModels from '@/src/domain/entities/config';
 import locales from '@/src/locales';
 import * as routings from '@/src/routing/config';
 

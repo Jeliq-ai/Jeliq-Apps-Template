@@ -5,10 +5,12 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import { generateExpressOpenAPIDoc, generateExpressOpenAPIOperations, generateExpressOpenAPIErrorMiddleware, removeExampleKeys } from "@core";
 import { getBackend, login, logout, checkLogin, resetPasswordForEmail, changePassword } from "@backend";
-import * as operations from "@/src/services/api/operations/index";
-import * as schema from "@/src/data/schema";
-import apiDoc from "@/src/services/api/schema.json";
+import * as operations from "@/src/infra/api/controllers/index";
+import * as entities from "@/src/domain/entities/config";
+import apiDoc from "@/src/infra/api/schema/schema.json";
 import * as OpenApiValidator from 'express-openapi-validator';
+import * as repositoryCreators from "@/src/infra/repositories/index";
+import services from "@/src/services/index";
 
 const apiSpec = generateExpressOpenAPIDoc(apiDoc);
 
@@ -41,7 +43,7 @@ initialize({
 	app: app,
 	apiDoc: apiSpec,
 	validateApiDoc: true,
-	operations: generateExpressOpenAPIOperations(operations, schema, backend, authMethods),
+	operations: generateExpressOpenAPIOperations(operations, entities, backend, repositoryCreators, authMethods, services),
     consumesMiddleware: {
         'application/json': express.json(),
     },

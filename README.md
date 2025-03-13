@@ -4,7 +4,7 @@ This is a template for a full-stack web application using [Jeliq](https://jeliq.
 
 ## Overview
 
-This template composed of the following technologies:
+This template is composed of the following technologies:
 - [Next.js](https://nextjs.org/): Web front-end framework
 - [Supabase](https://supabase.com/): Backend database & user authentication
 - [express-openapi](https://www.npmjs.com/package/express-openapi): Backend API framework
@@ -19,187 +19,168 @@ This template uses the following SDKs to integrate the above technologies seamle
 
 ## Setup
 
-Prerequisites are the following:
+Prerequisites:
 - Node.js 20.x or higher
-- Docker (to run supabase locally)
+- Docker (to run Supabase locally)
 
 1. Install pnpm globally using npm:
-```
-$ npm install -g pnpm@latest
-```
+   ```
+   $ npm install -g pnpm@latest
+   ```
 
 2. Install dependencies using pnpm:
-```
-$ pnpm install
-```
+   ```
+   $ pnpm install
+   ```
 
 ## Run
 
-### Run storybook
+### Run Storybook
 
 ```
 $ pnpm run:storybook
 ```
 
-### Run supabase locally
+### Run Supabase Locally
 
-1. Run supabase locally
+1. Ensure Docker daemon is running.
 
-**Note:** Ensure Docker daemon is running before starting Supabase.
+2. Start Supabase:
+   ```
+   $ supabase start
+   ```
+   You will see output similar to:
+   ```
+   Started supabase local development setup.
+            API URL: http://localhost:54321
+        GraphQL URL: http://localhost:54321/graphql/v1
+             DB URL: postgresql://postgres:postgres@localhost:54322/postgres
+         Studio URL: http://localhost:54323
+       Inbucket URL: http://localhost:54324
+         JWT secret: super-secret-jwt-token-with-at-least-32-characters
+           anon key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+   service_role key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+   ```
 
-```
-$ supabase start
-```
+3. Reset & migrate the database:
+   ```
+   $ supabase db reset
+   ```
+   Verify the migration by accessing [Supabase Studio](http://localhost:54323).
 
-You will see output similar to:
-
-```
-Started supabase local development setup.
-         API URL: http://localhost:54321
-     GraphQL URL: http://localhost:54321/graphql/v1
-          DB URL: postgresql://postgres:postgres@localhost:54322/postgres
-      Studio URL: http://localhost:54323
-    Inbucket URL: http://localhost:54324
-      JWT secret: super-secret-jwt-token-with-at-least-32-characters
-        anon key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
-service_role key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
-```
-
-**Note:** Make a note of the API URL and anon key for later use.
-
-2. Reset & Migrate the database:
-
-```
-$ supabase db reset
-```
-
-Verify the database migration by accessing the [Supabase Studio](http://localhost:54323).
-
-### Build & Run backend API: 
+### Build & Run Backend API
 
 1. Set environment variables:
-
-```
-$ export PORT=6001 # Set running port of the API
-$ export SUPABASE_URL=http://localhost:54321 # Set the supabase url in the message above
-$ export SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9... # Set the supabase anon key in the message above
-```
+   ```
+   $ export PORT=6001               # API running port
+   $ export SUPABASE_URL=http://localhost:54321  # Supabase URL
+   $ export SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...  # Supabase anon key
+   ```
 
 2. Build the API:
-
-```
-$ pnpm build:api
-```
+   ```
+   $ pnpm build:api
+   ```
 
 3. Run the API:
+   ```
+   $ pnpm run:api
+   ```
 
-```
-$ pnpm run:api
-```
+### Build & Run Web Front-end (Next.js)
 
-### Build & Run web front-end (Next.js):
-
-1. Set environment variables:
-
-```
-$ export NEXT_PUBLIC_API_ENDPOINT=http://localhost:6001/ # Set API endpoint
-```
+1. Set environment variable:
+   ```
+   $ export NEXT_PUBLIC_API_ENDPOINT=http://localhost:6001/  # API endpoint
+   ```
 
 2. Build the web:
-
-```
-$ pnpm build:web
-```
-
-**Note:** This command will automatically generate the Next.js App Router (in `app/`) from the Jeliq routing directory (`src/routing`).
+   ```
+   $ pnpm build:web
+   ```
+   **Note:** This command automatically generates the Next.js App Router (in `app/`) from the Jeliq routing directory (`src/routing`).
 
 3. Run the web:
-
-```
-$ pnpm run:web
-```
+   ```
+   $ pnpm run:web
+   ```
 
 ## Directory Structure
 
 ```
 .
-├── docs/                                # Specification documents
-│   ├── components/                      # Specification documents for components
-│   │   └── (ComponentName).md           
-│   ├── data/                            # Specification documents for data models
-│   │   └── (data_model_name).md         
-│   ├── locales/                         # Specification documents for locales
-│   │   └── (locale-name).md             
-│   ├── routes/                          # Specification documents for routes
-│   │   └── (RouteName).md               
-│   ├── routing/                         # Specification documents for routing
-│   │   └── (RoutingName).md             
-│   └── themeColors/                     
-│       └── index.md                     # Specification document for default theme colors
-│
-├── src/
-│   ├── components/                      # Components directory
-│   │   └── (ComponentName)/             
-│   │       ├── index.tsx                # Main component export file
-│   │       ├── index.stories.tsx        # Storybook configuration for the component
-│   │       ├── useViewModel.tsx         # View model hook for the component
-│   │       └── view.tsx                 # View for the component
-│   │
+├── .env.example                  # Environment variables sample
+├── .eslintrc.js                  # ESLint configuration
+├── .gitignore                    # Git ignore file
+├── .prettierrc                   # Prettier configuration
+├── next-env.d.ts                 # Next.js type declarations
+├── next.config.js                # Next.js configuration
+├── package.json                  # Project manifest
+├── pnpm-lock.yaml                # Dependency lock file
+├── postcss.config.js             # PostCSS configuration
+├── tailwind.config.js            # Tailwind CSS configuration
+├── tsconfig.api.json             # TypeScript configuration for API
+├── tsconfig.json                 # Shared TypeScript configuration
+├── tsconfig.web.json             # TypeScript configuration for web
+├── vite.config.mjs               # Vite configuration
+├── .storybook/                   # Storybook configuration
+│   └── preview.ts
+├── README.md                     # Project README
+├── api/                          # API directory
+│   ├── index.ts                  # API entry point
+│   ├── nodemon.json              # Nodemon configuration
+│   └── openapi-config.json       # OpenAPI configuration
+├── app/                          # Next.js app directory (auto-generated from routing)
+├── docs/                         # Documentation files
+│   ├── components/               # Component specifications
+│   ├── data/                     # Data model specifications
+│   ├── locales/                  # Locale specifications
+│   ├── routes/                   # Route specifications
+│   ├── routing/                  # Routing specifications
+│   └── themeColors/              # Theme color specifications
+├── public/                       # Public assets
+├── src/                          # Source code
+│   ├── components/               # React components
+│   │   └── (ComponentName)/      
+│   │       ├── index.tsx         
+│   │       ├── index.stories.tsx 
+│   │       ├── useViewModel.tsx  
+│   │       └── view.tsx          
 │   ├── config/
-│   │   └── themeColors.ts               # Theme colors configuration
-│   │
-│   ├── data/                            # Data models
-│   │   └── (data_model_name)/           
-│   │        ├── repository/             
-│   │        │   └── (methodName).ts     # Repository method implementation
-│   │        ├── schema.ts               # Data schema definition
-│   │
-│   ├── locales/                         # Internationalization
-│   │   └── (locale-name).ts             
-│   │
-│   ├── routing/                         # Jeliq routing directory
-│   │   └── (RoutingName)/               
-│   │       ├── layouts/                 # Layouts for the routing
-│   │       │   └── (LayoutName).ts      
-│   │       ├── routes/                  # Routes for the routing
-│   │       │   └── (RouteName)/         
-│   │       │       ├── index.ts         # A route component
-│   │       │       └── index.stories.tsx # Storybook configuration for the route
-│   │       └── config.ts                # A routing configuration
-│   │
-│   └── services/                        # Service layer
-│       ├── api/                         # Backend API
-│       │   ├── operations/              # API operations
-│       │   │   └── (operationName).ts   
-│       │   ├── docs.html                # Generated API documentation for development reference
-│       │   ├── schema.json              # OpenAPI schema file
-│       │   └── schema.d.ts              # Generated TypeScript definitions for the API
-│       │
-│       └── client/                      # API client generated by gen:api:cli
-│
-├── supabase/                            # Supabase directory
-│   ├── migrations/                      # DB migration files
-│   ├── config.toml                      # Supabase config file
-│   └── seed.sql                         # Database seed file
-│
-├── api/                                 # API directory
-│   ├── index.ts                         # API entry point
-│   ├── nodemon.json                     # Nodemon configuration for dev:api
-│   └── openapi-config.json              # OpenAPI configuration using for gen:api:cli
-│
-├── web/                                 # Web front-end (Next.js) directory
-│   └── Providers.tsx                    # Providers
-│
-├── app/                                 # Next.js app directory auto-generated from Jeliq routing configurations
-│
-├── public/                              # Public assets
-│
-├── __screenshots__/                     # Screenshots of components and routes
+│   │   └── themeColors.ts        # Theme colors definition
+│   ├── domain/                   # Domain logic
+│   │   ├── entities/             # Domain entities
+│   │   └── repositories/         # Domain repositories
+│   ├── infra/                    # Infrastructure layer
+│   │   ├── api/                  
+│   │   └── repositories/         
+│   ├── locales/                  # Internationalization files
+│   │   └── (locale-name).ts      
+│   ├── routing/                  # Routing configuration
+│   │   ├── config.ts             
+│   │   ├── routes.ts             
+│   │   └── (RoutingName)/        
+│   │       ├── layouts/          
+│   │       │   └── (LayoutName).ts
+│   │       ├── routes/           
+│   │       │   └── (RouteName)/   
+│   │       │       ├── index.ts   
+│   │       │       └── index.stories.tsx
+│   │       └── config.ts         
+│   ├── services/                 # Service layer
+│   └── usecases/                 # Business use cases
+├── supabase/                     # Supabase directory
+│   ├── migrations/              
+│   ├── config.toml              
+│   └── seed.sql                 
+└── web/                         # Web front-end (Next.js)
+    └── Providers.tsx            
 ```
 
-# License
+## License
+
 MIT
 
-# Related Links
-[Jeliq Official Website](https://jeliq.ai/)
+## Related Links
 
+[Jeliq Official Website](https://jeliq.ai/)

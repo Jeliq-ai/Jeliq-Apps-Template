@@ -21,6 +21,7 @@
     "./web/**/*",
     "./app/**/*",
     "./src/services/client/**/*",
+    "./src/infra/api/client/**/*",
     "next-env.d.ts",
 
     "node_modules",

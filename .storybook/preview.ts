@@ -3,7 +3,7 @@ import { withScreenshot } from 'storycap';
 import withProvider from './withProvider';
 import { initialize, mswLoader } from 'msw-storybook-addon';
 import { mswHandlers } from '@core';
-import openAPISchema from '../src/services/api/schema.json';
+import openAPISchema from '../src/infra/api/schema/schema.json';
 import '../app/globals.css';
 
 initialize(); // Initialize MSW

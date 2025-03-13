@@ -1,7 +1,7 @@
 import React from 'react';
 import { RoutingConfig, AppContextProvider, UIProvider, NavigationProvider, APIClientProvider, AuthProvider, IframeControllerProvider } from '@core';
 import locales from '../src/locales';
-import * as dataModels from '../src/data/schema';
+import * as dataModels from '../src/domain/entities/config';
 import * as routings from '../src/routing/config';
 
 export const appConfig: RoutingConfig = {
