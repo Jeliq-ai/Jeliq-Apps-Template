@@ -11,6 +11,7 @@ import apiDoc from "@/src/infra/api/schema/schema.json";
 import * as OpenApiValidator from 'express-openapi-validator';
 import * as repositoryCreators from "@/src/infra/repositories/index";
 import services from "@/src/services/index";
+import { getLLM } from "@/src/llm/config";
 
 const apiSpec = generateExpressOpenAPIDoc(apiDoc);
 
@@ -43,10 +44,9 @@ initialize({
 	app: app,
 	apiDoc: apiSpec,
 	validateApiDoc: true,
-	operations: generateExpressOpenAPIOperations(operations, entities, backend, repositoryCreators, authMethods, services),
+	operations: generateExpressOpenAPIOperations(operations, entities, backend, repositoryCreators, authMethods, services, getLLM),
     consumesMiddleware: {
         'application/json': express.json(),
     },
 	errorMiddleware: generateExpressOpenAPIErrorMiddleware(),
 });
-
