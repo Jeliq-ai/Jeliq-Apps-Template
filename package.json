@@ -17,7 +17,7 @@
     "gen:api:server": "node_modules/@core/bin/gen-api-server.sh",
     "gen:api:cli": "node_modules/@core/bin/gen-api-client.sh",
     "gen:api:docs": "npx -y @redocly/cli build-docs ./src/infra/api/schema/schema.json -o ./src/infra/api/schema/docs.html || true",
-    "gen:api": "pnpm gen:api:server && pnpm gen:api:cli && pnpm gen:api:docs",
+    "gen:api": "pnpm gen:api:server && pnpm gen:api:cli",
     "run:storybook": "storybook dev",
     "test:storybook": "test-storybook",
     "build": "pnpm build:api && pnpm build:web",
