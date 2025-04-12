@@ -11,7 +11,7 @@ import apiDoc from "@/src/infra/api/schema/schema.json";
 import * as OpenApiValidator from 'express-openapi-validator';
 import * as repositoryCreators from "@/src/infra/repositories/index";
 import services from "@/src/services/index";
-import { getLLM } from "@/src/llm/config";
+import { getLLM } from "@/src/config/llm";
 
 const apiSpec = generateExpressOpenAPIDoc(apiDoc);
 
