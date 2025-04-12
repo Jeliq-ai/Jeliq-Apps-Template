@@ -8,3 +8,5 @@ dist/
 .nfs*
 .next
 .DS_Store
+src/infra/api/schema/docs.html
+__screenshots__
