@@ -32,6 +32,7 @@
     "@core": "npm:@jeliq/app-sdk-core@^2.1.0",
     "@llm": "npm:@jeliq/app-sdk-llm@^1.1.2",
     "@router": "npm:@jeliq/app-sdk-next-router@^2.0.1",
+    "@vitejs/plugin-react-swc": "^3.9.0",
     "autoprefixer": "^10.4.20",
     "body-parser": "^1.20.3",
     "cookie-parser": "^1.4.6",

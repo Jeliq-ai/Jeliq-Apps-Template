@@ -1,24 +1,16 @@
 import { defineConfig, loadEnv } from 'vite';
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-swc';
 import fs from 'fs';
 import path, { resolve } from 'path';
 
-const extensions = [
-  '.web.tsx',
-  '.web.ts',
-  '.web.js',
-  '.tsx',
-  '.ts',
-  '.js',
-]
+const extensions = ['.web.tsx', '.web.ts', '.web.js', '.tsx', '.ts', '.js'];
 
 export default defineConfig(({ mode }) => {
   const root = resolve(__dirname, `./web/`);
   const env = loadEnv(mode, process.cwd(), '');
   const isProd = mode === 'production';
-  const packageJson = JSON.parse(
-    fs.readFileSync('package.json').toString(),
-  );
+  const packageJson = JSON.parse(fs.readFileSync('package.json').toString());
+  const isStorybook = process.env.GUI_EDITING_MODE === 'Storybook';
   return {
     root,
     base: '/',
@@ -30,6 +22,9 @@ export default defineConfig(({ mode }) => {
             plugins: ['decorators-legacy', 'classProperties'],
           },
         },
+        ...(isStorybook && {
+          jsxImportSource: '@core',
+        }),
       }),
     ],
 
@@ -41,10 +36,7 @@ export default defineConfig(({ mode }) => {
     },
 
     build: {
-      outDir: resolve(
-        __dirname,
-        'dist',
-      ),
+      outDir: resolve(__dirname, 'dist'),
       rollupOptions: {
         input: resolve(root, 'index.html'),
       },
@@ -55,16 +47,19 @@ export default defineConfig(({ mode }) => {
       alias: {
         '@/src': path.resolve(__dirname, './src'),
         'react-native': 'react-native-web',
+        '@core': path.resolve(__dirname, './node_modules/@core'),
       },
       extensions,
       dedupe: Object.keys(packageJson.dependencies),
     },
 
     define: {
-      '__dirname': JSON.stringify(''),
+      __dirname: JSON.stringify(''),
       'process.env': {
-        ENVIRONMENT: JSON.stringify(env.ENVIRONMENT || (isProd ? "production" : "development")),
-        API_ENDPOINT: JSON.stringify(env.API_ENDPOINT || ""),
+        ENVIRONMENT: JSON.stringify(
+          env.ENVIRONMENT || (isProd ? 'production' : 'development'),
+        ),
+        API_ENDPOINT: JSON.stringify(env.API_ENDPOINT || ''),
       },
     },
 
