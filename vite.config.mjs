@@ -10,7 +10,8 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   const isProd = mode === 'production';
   const packageJson = JSON.parse(fs.readFileSync('package.json').toString());
-  const isStorybook = process.env.GUI_EDITING_MODE === 'Storybook';
+  const isStorybook = !!process.env.STORYBOOK; // ← Storybook起動時だけ有効化する想定
+
   return {
     root,
     base: '/',
@@ -23,18 +24,16 @@ export default defineConfig(({ mode }) => {
           },
         },
         ...(isStorybook && {
-          jsxImportSource: '@core',
+          jsxImportSource: __dirname,
         }),
       }),
     ],
-
     server: {
       port: Number(process.env.PORT) || 9020,
       /*fs: {
         allow: ['/'],
       }*/
     },
-
     build: {
       outDir: resolve(__dirname, 'dist'),
       rollupOptions: {
@@ -42,17 +41,14 @@ export default defineConfig(({ mode }) => {
       },
       sourcemap: true,
     },
-
     resolve: {
       alias: {
         '@/src': path.resolve(__dirname, './src'),
         'react-native': 'react-native-web',
-        '@core': path.resolve(__dirname, './node_modules/@core'),
       },
       extensions,
       dedupe: Object.keys(packageJson.dependencies),
     },
-
     define: {
       __dirname: JSON.stringify(''),
       'process.env': {
@@ -62,7 +58,6 @@ export default defineConfig(({ mode }) => {
         API_ENDPOINT: JSON.stringify(env.API_ENDPOINT || ''),
       },
     },
-
     optimizeDeps: {
       esbuildOptions: {
         resolveExtensions: extensions,
