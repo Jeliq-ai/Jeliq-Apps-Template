@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   const isProd = mode === 'production';
   const packageJson = JSON.parse(fs.readFileSync('package.json').toString());
-  const isStorybook = !!process.env.STORYBOOK; // ← Storybook起動時だけ有効化する想定
+  const isGuiEditing = !!process?.env?.GUI_EDITING_MODE;
 
   return {
     root,
@@ -23,7 +23,7 @@ export default defineConfig(({ mode }) => {
             plugins: ['decorators-legacy', 'classProperties'],
           },
         },
-        ...(isStorybook && {
+        ...(isGuiEditing && {
           jsxImportSource: __dirname,
         }),
       }),
