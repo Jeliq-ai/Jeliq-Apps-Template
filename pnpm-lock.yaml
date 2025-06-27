@@ -10,17 +10,17 @@ overrides:
 
 dependencies:
   '@backend':
-    specifier: npm:@jeliq/app-sdk-backend-supabase@2.0.9
-    version: /@jeliq/app-sdk-backend-supabase@2.0.9(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+    specifier: npm:@jeliq/app-sdk-backend-supabase@2.0.13
+    version: /@jeliq/app-sdk-backend-supabase@2.0.13(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
   '@core':
-    specifier: npm:@jeliq/app-sdk-core@2.1.6
-    version: /@jeliq/app-sdk-core@2.1.6(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+    specifier: npm:@jeliq/app-sdk-core@2.1.8
+    version: /@jeliq/app-sdk-core@2.1.8(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
   '@llm':
-    specifier: npm:@jeliq/app-sdk-llm@1.1.12
-    version: /@jeliq/app-sdk-llm@1.1.12(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+    specifier: npm:@jeliq/app-sdk-llm@1.1.14
+    version: /@jeliq/app-sdk-llm@1.1.14(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
   '@router':
-    specifier: npm:@jeliq/app-sdk-next-router@2.0.5
-    version: /@jeliq/app-sdk-next-router@2.0.5(@babel/core@7.26.0)(@echopf/sdk@2.1.5)(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+    specifier: npm:@jeliq/app-sdk-next-router@2.0.8
+    version: /@jeliq/app-sdk-next-router@2.0.8(@babel/core@7.26.0)(@echopf/sdk@2.1.5)(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
   '@vitejs/plugin-react-swc':
     specifier: ^3.9.0
     version: 3.10.2(vite@5.4.11)
@@ -2133,31 +2133,55 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /@jeliq/app-sdk-backend-supabase@2.0.9(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
-    resolution: {integrity: sha512-uhFm/9Zwqa+1JpRI7RRZPA1WwQ39Ng23ou68XrFj+1YPapKPJtY/J9ZD2q7AjwqCq4+vtt3gyWAUHqhYIG8Stw==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-backend-supabase/-/app-sdk-backend-supabase-2.0.9.tgz}
+  /@jeliq/app-sdk-backend-supabase@2.0.13(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
+    resolution: {integrity: sha512-7y4r9m7KMgmalyzsDG5lRwAvaIxN1t3zwTUUE/KKDVGg506DKJH93YP7o9OMNRDalr2eOHrdwYIU8/NA9X8qXA==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-backend-supabase/-/app-sdk-backend-supabase-2.0.13.tgz}
     dependencies:
-      '@jeliq/app-sdk-core': 2.1.6(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+      '@jeliq/app-sdk-core': 2.1.8(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
       '@supabase/postgrest-js': 1.17.6
       '@supabase/supabase-js': 2.46.1
       dayjs: 1.11.13
+      franc: 6.2.0
+      korean-text-analytics: 0.0.7
+      kuromoji: 0.1.2
+      nodejieba: 3.4.4
     transitivePeerDependencies:
+      - '@langchain/aws'
+      - '@langchain/cerebras'
+      - '@langchain/cohere'
+      - '@langchain/deepseek'
+      - '@langchain/google-vertexai-web'
+      - '@langchain/groq'
+      - '@langchain/mistralai'
+      - '@langchain/ollama'
+      - '@langchain/xai'
+      - '@swc/core'
+      - '@swc/wasm'
       - '@types/node'
       - '@types/react'
+      - axios
       - bufferutil
+      - cheerio
+      - encoding
+      - handlebars
+      - openai
+      - peggy
       - react
       - redux
+      - supports-color
+      - typeorm
       - typescript
       - utf-8-validate
+      - ws
     dev: false
 
-  /@jeliq/app-sdk-core@2.1.6(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
-    resolution: {integrity: sha512-uYfzIlmL+gg60B7cRvbDsD/uRwWGgydCK7RwqTcfBb+7gFkZicu7jb+PIvvdmWxjYplx2AwfYm5A38NoAqZu5A==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-core/-/app-sdk-core-2.1.6.tgz}
+  /@jeliq/app-sdk-core@2.1.8(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
+    resolution: {integrity: sha512-lV6BCI9KjXjuXuPQbllrjtN/hDcligEtlC/JsoQtoQU0uZh8OfJXox1BlB6KY0znZTFb1hstxxc/ZFEL7oNY9g==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-core/-/app-sdk-core-2.1.8.tgz}
     hasBin: true
     requiresBuild: true
     peerDependencies:
       react: ^18.3.1
     dependencies:
-      '@jeliq/app-sdk-llm': 1.1.12(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+      '@jeliq/app-sdk-llm': 1.1.14(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
       '@reduxjs/toolkit': 2.3.0(react-redux@9.1.2)(react@18.3.1)
       express-openapi: 12.1.3
       js-cookie: 3.0.5
@@ -2165,7 +2189,7 @@ packages:
       msw: 2.6.5(@types/node@22.9.1)(typescript@5.6.3)
       react: 18.3.1
       react-redux: 9.1.2(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)
-      zod: 3.24.2
+      zod: 3.21.4
     transitivePeerDependencies:
       - '@langchain/aws'
       - '@langchain/cerebras'
@@ -2193,10 +2217,10 @@ packages:
       - ws
     dev: false
 
-  /@jeliq/app-sdk-llm@1.1.12(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
-    resolution: {integrity: sha512-5h3jyofBcr+KRkxYqCsnbhKaPPf0MC2AWQVkw/UOxk1TJOuh807EIHET933PTmncAaEwY/Fp4BJm8cpXWN/Sfw==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-llm/-/app-sdk-llm-1.1.12.tgz}
+  /@jeliq/app-sdk-llm@1.1.14(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
+    resolution: {integrity: sha512-CG+/E0kWXHJuUH3aat8TVu0Zp+jNOOiiYfXJPILoU9w+JcddBs8pCtaA+/udrkru13RychGn9m5/3prKDcsk4Q==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-llm/-/app-sdk-llm-1.1.14.tgz}
     dependencies:
-      '@jeliq/app-sdk-core': 2.1.6(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+      '@jeliq/app-sdk-core': 2.1.8(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
       '@langchain/anthropic': 0.3.16(@langchain/core@0.3.43)
       '@langchain/azure-openai': 0.0.11
       '@langchain/core': 0.3.43
@@ -2236,8 +2260,8 @@ packages:
       - ws
     dev: false
 
-  /@jeliq/app-sdk-next-router@2.0.5(@babel/core@7.26.0)(@echopf/sdk@2.1.5)(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
-    resolution: {integrity: sha512-zxljOYQq6c8ARvoD2EzypQi7/Ulu0PlV4LxYMmqQ2vVePEQWOWhifGHlZbVlIFeSZrge1bcYTDqgPl2ueR5MSg==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-next-router/-/app-sdk-next-router-2.0.5.tgz}
+  /@jeliq/app-sdk-next-router@2.0.8(@babel/core@7.26.0)(@echopf/sdk@2.1.5)(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
+    resolution: {integrity: sha512-8pCPyUh+baMFV0rkIbUgRvXziX8oJnwzRfguH31rrYQEJkiuvZ4BdWOg09dqk6cvb81agRPI8vXKgHBiTXGRWw==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-next-router/-/app-sdk-next-router-2.0.8.tgz}
     hasBin: true
     requiresBuild: true
     peerDependencies:
@@ -2245,7 +2269,7 @@ packages:
       react: ^18.3.1
     dependencies:
       '@echopf/sdk': 2.1.5
-      '@jeliq/app-sdk-core': 2.1.6(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+      '@jeliq/app-sdk-core': 2.1.8(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
       lodash: 4.17.21
       next: 14.2.18(@babel/core@7.26.0)(react-dom@18.3.1)(react@18.3.1)
       react: 18.3.1
@@ -2698,6 +2722,24 @@ packages:
       js-tiktoken: 1.0.19
     transitivePeerDependencies:
       - openai
+    dev: false
+
+  /@mapbox/node-pre-gyp@1.0.11:
+    resolution: {integrity: sha512-Yhlar6v9WQgUp/He7BdgzOz8lqMQ8sU+jkCq7Wx8Myc5YFJLbEe7lgui/V7G1qB1DJykHSGwreceSaD60Y0PUQ==, tarball: https://registry.npmjs.org/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.11.tgz}
+    hasBin: true
+    dependencies:
+      detect-libc: 2.0.4
+      https-proxy-agent: 5.0.1
+      make-dir: 3.1.0
+      node-fetch: 2.7.0
+      nopt: 5.0.0
+      npmlog: 5.0.1
+      rimraf: 3.0.2
+      semver: 7.6.3
+      tar: 6.2.1
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
     dev: false
 
   /@mdx-js/react@3.1.0(@types/react@18.3.12)(react@18.3.1):
@@ -4934,6 +4976,10 @@ packages:
     dev: false
     optional: true
 
+  /abbrev@1.1.1:
+    resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==, tarball: https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz}
+    dev: false
+
   /abort-controller@3.0.0:
     resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==, tarball: https://registry.npmjs.org/abort-controller/-/abort-controller-3.0.0.tgz}
     engines: {node: '>=6.5'}
@@ -5154,9 +5200,22 @@ packages:
       default-require-extensions: 3.0.1
     dev: true
 
+  /aproba@2.0.0:
+    resolution: {integrity: sha512-lYe4Gx7QT+MKGbDsA+Z+he/Wtef0BiwDOlK/XkBrdfsh9J/jPPXbX0tE9x9cl27Tmu5gg3QUbUrQYa/y+KOHPQ==, tarball: https://registry.npmjs.org/aproba/-/aproba-2.0.0.tgz}
+    dev: false
+
   /archy@1.0.0:
     resolution: {integrity: sha512-Xg+9RwCg/0p32teKdGMPTPnVXKD0w3DfHnFTficozsAgsvq2XenPJq/MYpzzQ/v8zrOyJn6Ds39VA4JIDwFfqw==, tarball: https://registry.npmjs.org/archy/-/archy-1.0.0.tgz}
     dev: true
+
+  /are-we-there-yet@2.0.0:
+    resolution: {integrity: sha512-Ci/qENmwHnsYo9xKIcUJN5LeDKdJ6R1Z1j9V/J5wyq8nh/mYPEpIKJbBZXtZjG04HiK7zV/p6Vs9952MrMeUIw==, tarball: https://registry.npmjs.org/are-we-there-yet/-/are-we-there-yet-2.0.0.tgz}
+    engines: {node: '>=10'}
+    deprecated: This package is no longer supported.
+    dependencies:
+      delegates: 1.0.0
+      readable-stream: 3.6.2
+    dev: false
 
   /arg@4.1.3:
     resolution: {integrity: sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==, tarball: https://registry.npmjs.org/arg/-/arg-4.1.3.tgz}
@@ -5324,6 +5383,12 @@ packages:
 
   /async-limiter@1.0.1:
     resolution: {integrity: sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==, tarball: https://registry.npmjs.org/async-limiter/-/async-limiter-1.0.1.tgz}
+    dev: false
+
+  /async@2.6.4:
+    resolution: {integrity: sha512-mzo5dfJYwAn29PeiJ0zvwTo04zj8HDJj0Mn8TD7sno7q12prdbnasKJHhkm2c1LgrhlJ0teaea8860oxi51mGA==, tarball: https://registry.npmjs.org/async/-/async-2.6.4.tgz}
+    dependencies:
+      lodash: 4.17.21
     dev: false
 
   /asynckit@0.4.0:
@@ -5801,6 +5866,11 @@ packages:
     resolution: {integrity: sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==, tarball: https://registry.npmjs.org/chownr/-/chownr-1.1.4.tgz}
     dev: true
 
+  /chownr@2.0.0:
+    resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==, tarball: https://registry.npmjs.org/chownr/-/chownr-2.0.0.tgz}
+    engines: {node: '>=10'}
+    dev: false
+
   /chownr@3.0.0:
     resolution: {integrity: sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g==, tarball: https://registry.npmjs.org/chownr/-/chownr-3.0.0.tgz}
     engines: {node: '>=18'}
@@ -5936,6 +6006,10 @@ packages:
     engines: {iojs: '>= 1.0.0', node: '>= 0.12.0'}
     dev: true
 
+  /collapse-white-space@2.1.0:
+    resolution: {integrity: sha512-loKTxY1zCOuG4j9f6EPnuyyYkf58RnhhWTvRoZEokgB+WbdXehfjFviyOVYkqzEWz1Q5kRiZdBYS5SwxbQYwzw==, tarball: https://registry.npmjs.org/collapse-white-space/-/collapse-white-space-2.1.0.tgz}
+    dev: false
+
   /collect-v8-coverage@1.0.2:
     resolution: {integrity: sha512-lHl4d5/ONEbLlJvaJNtsF/Lz+WvB07u2ycqTYbdrq7UypDXailES4valYb2eWiJFxZlVmpGekfqoxQhzyFdT4Q==, tarball: https://registry.npmjs.org/collect-v8-coverage/-/collect-v8-coverage-1.0.2.tgz}
     dev: true
@@ -5964,6 +6038,11 @@ packages:
 
   /color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==, tarball: https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz}
+
+  /color-support@1.1.3:
+    resolution: {integrity: sha512-qiBjkpbMLO/HL68y+lh4q0/O1MZFj2RX6X/KmMa3+gJD3z+WwI1ZzDHysvqHGS3mP6mznPckpXmw1nI9cJjyRg==, tarball: https://registry.npmjs.org/color-support/-/color-support-1.1.3.tgz}
+    hasBin: true
+    dev: false
 
   /colorette@1.4.0:
     resolution: {integrity: sha512-Y2oEozpomLn7Q3HFP7dpww7AtMJplbM9lGZP6RDfHqmbeRjiwRg4n6VM6j4KLmRke85uWEI7JqF17f3pqdRA0g==, tarball: https://registry.npmjs.org/colorette/-/colorette-1.4.0.tgz}
@@ -6062,6 +6141,10 @@ packages:
       utils-merge: 1.0.1
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /console-control-strings@1.1.0:
+    resolution: {integrity: sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==, tarball: https://registry.npmjs.org/console-control-strings/-/console-control-strings-1.1.0.tgz}
     dev: false
 
   /console-table-printer@2.12.1:
@@ -6439,6 +6522,10 @@ packages:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==, tarball: https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz}
     engines: {node: '>=0.4.0'}
 
+  /delegates@1.0.0:
+    resolution: {integrity: sha512-bd2L678uiWATM6m5Z1VzNCErI3jiGzt6HGY8OVICs40JQq/HALfbyNJmp0UDakEY4pMMaN0Ly5om/B1VI/+xfQ==, tarball: https://registry.npmjs.org/delegates/-/delegates-1.0.0.tgz}
+    dev: false
+
   /denodeify@1.2.1:
     resolution: {integrity: sha512-KNTihKNmQENUZeKu5fzfpzRqR5S2VMp4gl9RFHiWzj9DfvYQPMJ6XHKNaQxaGCXwPk6y9yme3aUoaiAe+KX+vg==, tarball: https://registry.npmjs.org/denodeify/-/denodeify-1.2.1.tgz}
     dev: false
@@ -6464,6 +6551,11 @@ packages:
   /destroy@1.2.0:
     resolution: {integrity: sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==, tarball: https://registry.npmjs.org/destroy/-/destroy-1.2.0.tgz}
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
+
+  /detect-libc@2.0.4:
+    resolution: {integrity: sha512-3UDv+G9CsCKO1WKMGw9fwq/SWJYbI0c5Y7LU1AXYoDdbhE2AHQ6N6Nb34sG8Fj7T5APy8qXDCKuuIHd1BR0tVA==, tarball: https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.4.tgz}
+    engines: {node: '>=8'}
+    dev: false
 
   /detect-newline@3.1.0:
     resolution: {integrity: sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==, tarball: https://registry.npmjs.org/detect-newline/-/detect-newline-3.1.0.tgz}
@@ -6564,6 +6656,10 @@ packages:
     resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==, tarball: https://registry.npmjs.org/dotenv/-/dotenv-16.4.5.tgz}
     engines: {node: '>=12'}
     dev: true
+
+  /doublearray@0.0.2:
+    resolution: {integrity: sha512-aw55FtZzT6AmiamEj2kvmR6BuFqvYgKZUkfQ7teqVRNqD5UE0rw8IeW/3gieHNKQ5sPuDKlljWEn4bzv5+1bHw==, tarball: https://registry.npmjs.org/doublearray/-/doublearray-0.0.2.tgz}
+    dev: false
 
   /eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==, tarball: https://registry.npmjs.org/eastasianwidth/-/eastasianwidth-0.2.0.tgz}
@@ -7493,6 +7589,12 @@ packages:
       map-cache: 0.2.2
     dev: true
 
+  /franc@6.2.0:
+    resolution: {integrity: sha512-rcAewP7PSHvjq7Kgd7dhj82zE071kX5B4W1M4ewYMf/P+i6YsDQmj62Xz3VQm9zyUzUXwhIde/wHLGCMrM+yGg==, tarball: https://registry.npmjs.org/franc/-/franc-6.2.0.tgz}
+    dependencies:
+      trigram-utils: 2.0.1
+    dev: false
+
   /fresh@0.5.2:
     resolution: {integrity: sha512-zJ2mQYM18rEFOudeV4GShTGIQ7RbzA7ozbU9I/XBpm7kqgMywgmylMwXHxZJmkVoYkna9d2pVXVXPdYTP9ej8Q==, tarball: https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz}
     engines: {node: '>= 0.6'}
@@ -7526,6 +7628,13 @@ packages:
       graceful-fs: 4.2.11
       jsonfile: 4.0.0
       universalify: 0.1.2
+    dev: false
+
+  /fs-minipass@2.1.0:
+    resolution: {integrity: sha512-V/JgOLFCS+R6Vcq0slCuaeWEdNC3ouDlJMNIsacH2VtALiu9mV4LPrHc5cDl8k5aw6J8jwgWWpiTo5RYhmIzvg==, tarball: https://registry.npmjs.org/fs-minipass/-/fs-minipass-2.1.0.tgz}
+    engines: {node: '>= 8'}
+    dependencies:
+      minipass: 3.3.6
     dev: false
 
   /fs-routes@12.1.3(glob@11.0.0):
@@ -7570,6 +7679,22 @@ packages:
   /functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==, tarball: https://registry.npmjs.org/functions-have-names/-/functions-have-names-1.2.3.tgz}
     dev: true
+
+  /gauge@3.0.2:
+    resolution: {integrity: sha512-+5J6MS/5XksCuXq++uFRsnUd7Ovu1XenbeuIuNRJxYWjgQbPuFhT14lAvsWfqfAmnwluf1OwMjz39HjfLPci0Q==, tarball: https://registry.npmjs.org/gauge/-/gauge-3.0.2.tgz}
+    engines: {node: '>=10'}
+    deprecated: This package is no longer supported.
+    dependencies:
+      aproba: 2.0.0
+      color-support: 1.1.3
+      console-control-strings: 1.1.0
+      has-unicode: 2.0.1
+      object-assign: 4.1.1
+      signal-exit: 3.0.7
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+      wide-align: 1.1.5
+    dev: false
 
   /gaxios@5.1.3:
     resolution: {integrity: sha512-95hVgBRgEIRQQQHIbnxBXeHbW4TqFk4ZDJW7wmVtvYar72FdhRIo1UGOLS2eRAKCPEdPBWu+M7+A33D9CdX9rA==, tarball: https://registry.npmjs.org/gaxios/-/gaxios-5.1.3.tgz}
@@ -7844,6 +7969,10 @@ packages:
       has-symbols: 1.0.3
     dev: true
 
+  /has-unicode@2.0.1:
+    resolution: {integrity: sha512-8Rf9Y83NBReMnx0gFzA8JImQACstCYWUplepDa9xprwwtmgEZUF0h/i5xSA625zB/I37EtrswSST6OXxwaaIJQ==, tarball: https://registry.npmjs.org/has-unicode/-/has-unicode-2.0.1.tgz}
+    dev: false
+
   /has-value@0.3.1:
     resolution: {integrity: sha512-gpG936j8/MzaeID5Yif+577c17TxaDmhuyVgSwtnL/q8UUTySg8Mecb+8Cf1otgLoD7DDH75axp86ER7LFsf3Q==, tarball: https://registry.npmjs.org/has-value/-/has-value-0.3.1.tgz}
     engines: {node: '>=0.10.0'}
@@ -8021,6 +8150,15 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       safer-buffer: 2.1.2
+
+  /iconv@2.3.5:
+    resolution: {integrity: sha512-U5ajDbtDfadp7pvUMC0F2XbkP5vQn9Xrwa6UptePl+cK8EILxapAt3sXers9B3Gxagk+zVjL2ELKuzQvyqOwug==, tarball: https://registry.npmjs.org/iconv/-/iconv-2.3.5.tgz}
+    engines: {node: '>=0.8.0'}
+    requiresBuild: true
+    dependencies:
+      nan: 2.22.2
+      safer-buffer: 2.1.2
+    dev: false
 
   /ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==, tarball: https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz}
@@ -9265,6 +9403,24 @@ packages:
     resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==, tarball: https://registry.npmjs.org/kleur/-/kleur-3.0.3.tgz}
     engines: {node: '>=6'}
 
+  /korean-text-analytics@0.0.7:
+    resolution: {integrity: sha512-OSqDS3dPHXtK1Ec/zdFK4Pp2nbyOlZjeUvdgoArEkDNlC1KfT2eT4wjvNrlP0I5vxxzBOwiC3BUfxhDl1j2WUA==, tarball: https://registry.npmjs.org/korean-text-analytics/-/korean-text-analytics-0.0.7.tgz}
+    engines: {node: '>= 6.9.4'}
+    dependencies:
+      iconv: 2.3.5
+      iconv-lite: 0.4.24
+      lodash: 4.17.21
+      text-encoding: 0.6.4
+    dev: false
+
+  /kuromoji@0.1.2:
+    resolution: {integrity: sha512-V0dUf+C2LpcPEXhoHLMAop/bOht16Dyr+mDiIE39yX3vqau7p80De/koFqpiTcL1zzdZlc3xuHZ8u5gjYRfFaQ==, tarball: https://registry.npmjs.org/kuromoji/-/kuromoji-0.1.2.tgz}
+    dependencies:
+      async: 2.6.4
+      doublearray: 0.0.2
+      zlibjs: 0.3.1
+    dev: false
+
   /langchain@0.3.20(@langchain/anthropic@0.3.16)(@langchain/core@0.3.43)(@langchain/google-genai@0.1.12)(@langchain/google-vertexai@0.1.8):
     resolution: {integrity: sha512-BFCsJqKu5yJMG7AKWfTkku3rRnTGxnvi3tQXBceQt406moJ8VfZqMWrl7FC1WPkdNKinepPON2q5sb62IPoKwQ==, tarball: https://registry.npmjs.org/langchain/-/langchain-0.3.20.tgz}
     engines: {node: '>=18'}
@@ -9555,7 +9711,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       semver: 6.3.1
-    dev: true
 
   /make-dir@4.0.0:
     resolution: {integrity: sha512-hXdUTZYIVOt1Ex//jAQi+wTZZpUpwBj/0QsOzqegb3rGMMeJiSEu5xLHnYfBrRV4RH2+OCSOO95Is/7x1WJ4bw==, tarball: https://registry.npmjs.org/make-dir/-/make-dir-4.0.0.tgz}
@@ -9979,9 +10134,29 @@ packages:
   /minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==, tarball: https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz}
 
+  /minipass@3.3.6:
+    resolution: {integrity: sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==, tarball: https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz}
+    engines: {node: '>=8'}
+    dependencies:
+      yallist: 4.0.0
+    dev: false
+
+  /minipass@5.0.0:
+    resolution: {integrity: sha512-3FnjYuehv9k6ovOEbyOswadCDPX1piCfhV8ncmYtHOjuPwylVWsghTLo7rabjC3Rx5xD4HDx8Wm1xnMF7S5qFQ==, tarball: https://registry.npmjs.org/minipass/-/minipass-5.0.0.tgz}
+    engines: {node: '>=8'}
+    dev: false
+
   /minipass@7.1.2:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==, tarball: https://registry.npmjs.org/minipass/-/minipass-7.1.2.tgz}
     engines: {node: '>=16 || 14 >=14.17'}
+
+  /minizlib@2.1.2:
+    resolution: {integrity: sha512-bAxsR8BVfj60DWXHE3u30oHzfl4G7khkSuPW+qvpd7jFRHm7dLxOjUk1EHACJ/hxLY8phGJ0YhYHZo7jil7Qdg==, tarball: https://registry.npmjs.org/minizlib/-/minizlib-2.1.2.tgz}
+    engines: {node: '>= 8'}
+    dependencies:
+      minipass: 3.3.6
+      yallist: 4.0.0
+    dev: false
 
   /minizlib@3.0.1:
     resolution: {integrity: sha512-umcy022ILvb5/3Djuu8LWeqUa8D68JaBzlttKeMWen48SjabqS3iY5w/vzeMzMUNhLDifyhbOwKDSznB1vvrwg==, tarball: https://registry.npmjs.org/minizlib/-/minizlib-3.0.1.tgz}
@@ -10115,6 +10290,14 @@ packages:
       thenify-all: 1.6.0
     dev: false
 
+  /n-gram@2.0.2:
+    resolution: {integrity: sha512-S24aGsn+HLBxUGVAUFOwGpKs7LBcG4RudKU//eWzt/mQ97/NMKQxDWHyHx63UNWk/OOdihgmzoETn1tf5nQDzQ==, tarball: https://registry.npmjs.org/n-gram/-/n-gram-2.0.2.tgz}
+    dev: false
+
+  /nan@2.22.2:
+    resolution: {integrity: sha512-DANghxFkS1plDdRsX0X9pm0Z6SJNN6gBdtXfanwoZ8hooC5gosGFSBGRYHUVPz1asKA/kMRqDRdHrluZ61SpBQ==, tarball: https://registry.npmjs.org/nan/-/nan-2.22.2.tgz}
+    dev: false
+
   /nanoid@3.3.7:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==, tarball: https://registry.npmjs.org/nanoid/-/nanoid-3.3.7.tgz}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -10206,6 +10389,10 @@ packages:
     resolution: {integrity: sha512-AGK2yQKIjRuqnc6VkX2Xj5d+QW8xZ87pa1UK6yA6ouUyuxfHuMP6umE5QK7UmTeOAymo+Zx1Fxiuw9rVx8taHQ==, tarball: https://registry.npmjs.org/node-abort-controller/-/node-abort-controller-3.1.1.tgz}
     dev: false
 
+  /node-addon-api@3.2.1:
+    resolution: {integrity: sha512-mmcei9JghVNDYydghQmeDX8KoAm0FAiYyIcUt/N4nhyAipB17pllZQDOJD2fotxABnt4Mdz+dKTO7eftLg4d0A==, tarball: https://registry.npmjs.org/node-addon-api/-/node-addon-api-3.2.1.tgz}
+    dev: false
+
   /node-dir@0.1.17:
     resolution: {integrity: sha512-tmPX422rYgofd4epzrNoOXiE8XFZYOcCq1vD7MAXCDO+O+zndlA2ztdKKMa+EeuBG5tHETpr4ml4RGgpqDCCAg==, tarball: https://registry.npmjs.org/node-dir/-/node-dir-0.1.17.tgz}
     engines: {node: '>= 0.10.5'}
@@ -10260,6 +10447,18 @@ packages:
     engines: {node: '>=0.12.0'}
     dev: false
 
+  /nodejieba@3.4.4:
+    resolution: {integrity: sha512-yqx89UYqTQoIL04reK6cRWBGpzUEeahwX65Qrj8+6d4FN/DOE3h26gBD2KmLAY5lTEQt0Uc42uZqKjlNUuIReA==, tarball: https://registry.npmjs.org/nodejieba/-/nodejieba-3.4.4.tgz}
+    engines: {node: '>= 10.20.0'}
+    requiresBuild: true
+    dependencies:
+      '@mapbox/node-pre-gyp': 1.0.11
+      node-addon-api: 3.2.1
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: false
+
   /nodemon@3.1.7:
     resolution: {integrity: sha512-hLj7fuMow6f0lbB0cD14Lz2xNjwsyruH251Pk4t/yIitCFJbmY1myuLlHm/q06aST4jg6EgAh74PIBBrRqpVAQ==, tarball: https://registry.npmjs.org/nodemon/-/nodemon-3.1.7.tgz}
     engines: {node: '>=10'}
@@ -10276,6 +10475,14 @@ packages:
       touch: 3.1.1
       undefsafe: 2.0.5
     dev: true
+
+  /nopt@5.0.0:
+    resolution: {integrity: sha512-Tbj67rffqceeLpcRXrT7vKAN8CwfPeIBgM7E6iBkmKLV7bEMwpGgYLGv0jACUsECaa/vuxP0IjEont6umdMgtQ==, tarball: https://registry.npmjs.org/nopt/-/nopt-5.0.0.tgz}
+    engines: {node: '>=6'}
+    hasBin: true
+    dependencies:
+      abbrev: 1.1.1
+    dev: false
 
   /normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==, tarball: https://registry.npmjs.org/normalize-path/-/normalize-path-3.0.0.tgz}
@@ -10296,6 +10503,16 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       path-key: 3.1.1
+
+  /npmlog@5.0.1:
+    resolution: {integrity: sha512-AqZtDUWOMKs1G/8lwylVjrdYgqA4d9nu8hc+0gzRxlDb1I10+FHBGMXs6aiQHFdCUUlqH99MUMuLfzWDNDtfxw==, tarball: https://registry.npmjs.org/npmlog/-/npmlog-5.0.1.tgz}
+    deprecated: This package is no longer supported.
+    dependencies:
+      are-we-there-yet: 2.0.0
+      console-control-strings: 1.1.0
+      gauge: 3.0.2
+      set-blocking: 2.0.0
+    dev: false
 
   /nullthrows@1.1.1:
     resolution: {integrity: sha512-2vPPEi+Z7WqML2jZYddDIfy5Dqb0r2fze2zTxNNknZaFpVHU3mFB3R+DWeJWGVx0ecvttSGlJTI+WG+8Z4cDWw==, tarball: https://registry.npmjs.org/nullthrows/-/nullthrows-1.1.1.tgz}
@@ -12484,6 +12701,18 @@ packages:
       readable-stream: 3.6.2
     dev: true
 
+  /tar@6.2.1:
+    resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==, tarball: https://registry.npmjs.org/tar/-/tar-6.2.1.tgz}
+    engines: {node: '>=10'}
+    dependencies:
+      chownr: 2.0.0
+      fs-minipass: 2.1.0
+      minipass: 5.0.0
+      minizlib: 2.1.2
+      mkdirp: 1.0.4
+      yallist: 4.0.0
+    dev: false
+
   /tar@7.4.3:
     resolution: {integrity: sha512-5S7Va8hKfV7W5U6g3aYxXmlPoZVAwUMy9AOKyF2fVuZa2UD3qZjg578OrLRt8PcNN1PleVaL/5/yYATNL0ICUw==, tarball: https://registry.npmjs.org/tar/-/tar-7.4.3.tgz}
     engines: {node: '>=18'}
@@ -12558,6 +12787,11 @@ packages:
       glob: 7.2.3
       minimatch: 3.1.2
     dev: true
+
+  /text-encoding@0.6.4:
+    resolution: {integrity: sha512-hJnc6Qg3dWoOMkqP53F0dzRIgtmsAge09kxUIqGrEUS4qr5rWLckGYaQAVr+opBrIMRErGgy6f5aPnyPpyGRfg==, tarball: https://registry.npmjs.org/text-encoding/-/text-encoding-0.6.4.tgz}
+    deprecated: no longer maintained
+    dev: false
 
   /text-table@0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==, tarball: https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz}
@@ -12655,6 +12889,13 @@ packages:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==, tarball: https://registry.npmjs.org/tree-kill/-/tree-kill-1.2.2.tgz}
     hasBin: true
     dev: true
+
+  /trigram-utils@2.0.1:
+    resolution: {integrity: sha512-nfWIXHEaB+HdyslAfMxSqWKDdmqY9I32jS7GnqpdWQnLH89r6A5sdk3fDVYqGAZ0CrT8ovAFSAo6HRiWcWNIGQ==, tarball: https://registry.npmjs.org/trigram-utils/-/trigram-utils-2.0.1.tgz}
+    dependencies:
+      collapse-white-space: 2.1.0
+      n-gram: 2.0.2
+    dev: false
 
   /truncate-utf8-bytes@1.0.2:
     resolution: {integrity: sha512-95Pu1QXQvruGEhv62XCMO3Mm90GscOCClvrIUwCM0PYOXK3kaF3l3sIHxx71ThJfcbM2O5Au6SO3AWCSEfW4mQ==, tarball: https://registry.npmjs.org/truncate-utf8-bytes/-/truncate-utf8-bytes-1.0.2.tgz}
@@ -13291,6 +13532,12 @@ packages:
     dependencies:
       isexe: 2.0.0
 
+  /wide-align@1.1.5:
+    resolution: {integrity: sha512-eDMORYaPNZ4sQIuuYPDHdQvf4gyCF9rEEV/yPxGfwPkRodwEgiMUUXTx/dex+Me0wxx53S+NgUHaP7y3MGlDmg==, tarball: https://registry.npmjs.org/wide-align/-/wide-align-1.1.5.tgz}
+    dependencies:
+      string-width: 4.2.3
+    dev: false
+
   /word-wrap@1.2.5:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==, tarball: https://registry.npmjs.org/word-wrap/-/word-wrap-1.2.5.tgz}
     engines: {node: '>=0.10.0'}
@@ -13509,6 +13756,10 @@ packages:
     resolution: {integrity: sha512-cYVsTjKl8b+FrnidjibDWskAv7UKOfcwaVZdp/it9n1s9fU3IkgDbhdIRKCW4JDsAlECJY0ytoVPT3sK6kideA==, tarball: https://registry.npmjs.org/yoctocolors-cjs/-/yoctocolors-cjs-2.1.2.tgz}
     engines: {node: '>=18'}
 
+  /zlibjs@0.3.1:
+    resolution: {integrity: sha512-+J9RrgTKOmlxFSDHo0pI1xM6BLVUv+o0ZT9ANtCxGkjIVCCUdx9alUF8Gm+dGLKbkkkidWIHFDZHDMpfITt4+w==, tarball: https://registry.npmjs.org/zlibjs/-/zlibjs-0.3.1.tgz}
+    dev: false
+
   /zod-to-json-schema@3.20.3(zod@3.24.2):
     resolution: {integrity: sha512-/Q3wnyxAfCt94ZcrGiXXoiAfRqasxl9CX64LZ9fj+4dKH68zulUtU0uk1WMxQPfAxQ0ZI70dKzcoW7hHj+DwSQ==, tarball: https://registry.npmjs.org/zod-to-json-schema/-/zod-to-json-schema-3.20.3.tgz}
     peerDependencies:
@@ -13523,6 +13774,10 @@ packages:
       zod: ^3.24.1
     dependencies:
       zod: 3.24.2
+    dev: false
+
+  /zod@3.21.4:
+    resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==, tarball: https://registry.npmjs.org/zod/-/zod-3.21.4.tgz}
     dev: false
 
   /zod@3.24.2:
