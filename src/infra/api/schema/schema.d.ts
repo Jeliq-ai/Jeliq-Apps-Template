@@ -93,9 +93,9 @@ export type components = {
         /** @description A query parameter for search keywords. */
         SearchKeywords: string | null;
         /** @description A query parameter for specifying the page number of the results. */
-        SearchPage: number;
+        SearchPage: number | null;
         /** @description A query parameter for specifying the maximum number of results per page. */
-        SearchLimit: number;
+        SearchLimit: number | null;
         /** @description A query parameter for specifying the field name by which the results should be ordered. */
         SearchOrderBy: string | null;
         /** @description A query parameter for specifying the sorting order of the results (ascending or descending). */

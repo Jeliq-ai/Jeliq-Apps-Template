@@ -10,17 +10,17 @@ overrides:
 
 dependencies:
   '@backend':
-    specifier: npm:@jeliq/app-sdk-backend-supabase@2.0.13
-    version: /@jeliq/app-sdk-backend-supabase@2.0.13(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+    specifier: npm:@jeliq/app-sdk-backend-supabase@2.0.15
+    version: /@jeliq/app-sdk-backend-supabase@2.0.15(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
   '@core':
-    specifier: npm:@jeliq/app-sdk-core@2.1.8
-    version: /@jeliq/app-sdk-core@2.1.8(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+    specifier: npm:@jeliq/app-sdk-core@2.1.9
+    version: /@jeliq/app-sdk-core@2.1.9(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
   '@llm':
-    specifier: npm:@jeliq/app-sdk-llm@1.1.14
-    version: /@jeliq/app-sdk-llm@1.1.14(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+    specifier: npm:@jeliq/app-sdk-llm@1.1.15
+    version: /@jeliq/app-sdk-llm@1.1.15(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
   '@router':
-    specifier: npm:@jeliq/app-sdk-next-router@2.0.8
-    version: /@jeliq/app-sdk-next-router@2.0.8(@babel/core@7.26.0)(@echopf/sdk@2.1.5)(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+    specifier: npm:@jeliq/app-sdk-next-router@2.0.9
+    version: /@jeliq/app-sdk-next-router@2.0.9(@babel/core@7.26.0)(@echopf/sdk@2.1.5)(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
   '@vitejs/plugin-react-swc':
     specifier: ^3.9.0
     version: 3.10.2(vite@5.4.11)
@@ -326,6 +326,7 @@ packages:
   /@azure/openai@1.0.0-beta.11:
     resolution: {integrity: sha512-OXS27xkG1abiGf5VZUKnkJKr1VCo8+6EUrTGW5aSVjc5COqX8jAUqVAOZsQVCHBdtWYSBULlZkc0ncKMTRQAiQ==, tarball: https://registry.npmjs.org/@azure/openai/-/openai-1.0.0-beta.11.tgz}
     engines: {node: '>=18.0.0'}
+    deprecated: 'The Azure OpenAI client library for JavaScript beta has been retired. Please migrate to the stable OpenAI SDK for JavaScript using the migration guide: https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/openai/openai/MIGRATION.md.'
     dependencies:
       '@azure-rest/core-client': 1.4.0
       '@azure/core-auth': 1.9.0
@@ -2133,10 +2134,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /@jeliq/app-sdk-backend-supabase@2.0.13(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
-    resolution: {integrity: sha512-7y4r9m7KMgmalyzsDG5lRwAvaIxN1t3zwTUUE/KKDVGg506DKJH93YP7o9OMNRDalr2eOHrdwYIU8/NA9X8qXA==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-backend-supabase/-/app-sdk-backend-supabase-2.0.13.tgz}
+  /@jeliq/app-sdk-backend-supabase@2.0.15(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
+    resolution: {integrity: sha512-6npoYSeZ3yDlvYvGYcxYrcNvJTL7vfA8FHtu6FgzkyAddJLFQXfiuGgIu5Bfm5h4U2sNcCsQfbl9Xeyfwp7WGg==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-backend-supabase/-/app-sdk-backend-supabase-2.0.15.tgz}
     dependencies:
-      '@jeliq/app-sdk-core': 2.1.8(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+      '@jeliq/app-sdk-core': 2.1.9(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
       '@supabase/postgrest-js': 1.17.6
       '@supabase/supabase-js': 2.46.1
       dayjs: 1.11.13
@@ -2174,14 +2175,14 @@ packages:
       - ws
     dev: false
 
-  /@jeliq/app-sdk-core@2.1.8(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
-    resolution: {integrity: sha512-lV6BCI9KjXjuXuPQbllrjtN/hDcligEtlC/JsoQtoQU0uZh8OfJXox1BlB6KY0znZTFb1hstxxc/ZFEL7oNY9g==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-core/-/app-sdk-core-2.1.8.tgz}
+  /@jeliq/app-sdk-core@2.1.9(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
+    resolution: {integrity: sha512-lpfB0sUlMss7oqD6wWP9i3ultAfUs5MKy5XDwqxRb2gMz8EUYabmdLSEu5y/fZ54Hjmbgpov8mS3D5PyqUhp4g==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-core/-/app-sdk-core-2.1.9.tgz}
     hasBin: true
     requiresBuild: true
     peerDependencies:
       react: ^18.3.1
     dependencies:
-      '@jeliq/app-sdk-llm': 1.1.14(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+      '@jeliq/app-sdk-llm': 1.1.15(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
       '@reduxjs/toolkit': 2.3.0(react-redux@9.1.2)(react@18.3.1)
       express-openapi: 12.1.3
       js-cookie: 3.0.5
@@ -2189,7 +2190,7 @@ packages:
       msw: 2.6.5(@types/node@22.9.1)(typescript@5.6.3)
       react: 18.3.1
       react-redux: 9.1.2(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)
-      zod: 3.21.4
+      zod: 3.24.2
     transitivePeerDependencies:
       - '@langchain/aws'
       - '@langchain/cerebras'
@@ -2217,10 +2218,10 @@ packages:
       - ws
     dev: false
 
-  /@jeliq/app-sdk-llm@1.1.14(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
-    resolution: {integrity: sha512-CG+/E0kWXHJuUH3aat8TVu0Zp+jNOOiiYfXJPILoU9w+JcddBs8pCtaA+/udrkru13RychGn9m5/3prKDcsk4Q==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-llm/-/app-sdk-llm-1.1.14.tgz}
+  /@jeliq/app-sdk-llm@1.1.15(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
+    resolution: {integrity: sha512-XJ4lUAbmQSfape13boDg9G5fM8VQLnDcK99b7EpF24waqYEA2nTjJX05/jGnPOYAAjKuhNa69mjrN0qFvpp+UQ==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-llm/-/app-sdk-llm-1.1.15.tgz}
     dependencies:
-      '@jeliq/app-sdk-core': 2.1.8(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+      '@jeliq/app-sdk-core': 2.1.9(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
       '@langchain/anthropic': 0.3.16(@langchain/core@0.3.43)
       '@langchain/azure-openai': 0.0.11
       '@langchain/core': 0.3.43
@@ -2260,8 +2261,8 @@ packages:
       - ws
     dev: false
 
-  /@jeliq/app-sdk-next-router@2.0.8(@babel/core@7.26.0)(@echopf/sdk@2.1.5)(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
-    resolution: {integrity: sha512-8pCPyUh+baMFV0rkIbUgRvXziX8oJnwzRfguH31rrYQEJkiuvZ4BdWOg09dqk6cvb81agRPI8vXKgHBiTXGRWw==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-next-router/-/app-sdk-next-router-2.0.8.tgz}
+  /@jeliq/app-sdk-next-router@2.0.9(@babel/core@7.26.0)(@echopf/sdk@2.1.5)(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
+    resolution: {integrity: sha512-NPwzV30/F1F56UeIw8NU0hqWHdc/ca8GuhMf6Wztke3TvrV0fzkdr8ZsD5IKjNdPX+N00y4Spy0nvwFlz9RdEA==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-next-router/-/app-sdk-next-router-2.0.9.tgz}
     hasBin: true
     requiresBuild: true
     peerDependencies:
@@ -2269,7 +2270,7 @@ packages:
       react: ^18.3.1
     dependencies:
       '@echopf/sdk': 2.1.5
-      '@jeliq/app-sdk-core': 2.1.8(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+      '@jeliq/app-sdk-core': 2.1.9(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
       lodash: 4.17.21
       next: 14.2.18(@babel/core@7.26.0)(react-dom@18.3.1)(react@18.3.1)
       react: 18.3.1
@@ -13774,10 +13775,6 @@ packages:
       zod: ^3.24.1
     dependencies:
       zod: 3.24.2
-    dev: false
-
-  /zod@3.21.4:
-    resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==, tarball: https://registry.npmjs.org/zod/-/zod-3.21.4.tgz}
     dev: false
 
   /zod@3.24.2:
