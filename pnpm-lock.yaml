@@ -10,8 +10,8 @@ overrides:
 
 dependencies:
   '@backend':
-    specifier: npm:@jeliq/app-sdk-backend-supabase@2.0.15
-    version: /@jeliq/app-sdk-backend-supabase@2.0.15(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+    specifier: npm:@jeliq/app-sdk-backend-supabase@2.0.16
+    version: /@jeliq/app-sdk-backend-supabase@2.0.16(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
   '@core':
     specifier: npm:@jeliq/app-sdk-core@2.1.9
     version: /@jeliq/app-sdk-core@2.1.9(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
@@ -2134,8 +2134,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /@jeliq/app-sdk-backend-supabase@2.0.15(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
-    resolution: {integrity: sha512-6npoYSeZ3yDlvYvGYcxYrcNvJTL7vfA8FHtu6FgzkyAddJLFQXfiuGgIu5Bfm5h4U2sNcCsQfbl9Xeyfwp7WGg==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-backend-supabase/-/app-sdk-backend-supabase-2.0.15.tgz}
+  /@jeliq/app-sdk-backend-supabase@2.0.16(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
+    resolution: {integrity: sha512-CCRK0SMuuY6fQDFID/zPhneCJIj0f+EZ+evWw4o0nIJKxPFIO93EftZwATf3RAjvvF/dwIyF+gmmLENSaZv7Ww==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-backend-supabase/-/app-sdk-backend-supabase-2.0.16.tgz}
     dependencies:
       '@jeliq/app-sdk-core': 2.1.9(@swc/core@1.9.2)(@types/node@22.9.1)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
       '@supabase/postgrest-js': 1.17.6

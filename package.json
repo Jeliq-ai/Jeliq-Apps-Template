@@ -28,7 +28,7 @@
     "dev:api": "nodemon --config ./api/nodemon.json"
   },
   "dependencies": {
-    "@backend": "npm:@jeliq/app-sdk-backend-supabase@2.0.15",
+    "@backend": "npm:@jeliq/app-sdk-backend-supabase@2.0.16",
     "@core": "npm:@jeliq/app-sdk-core@2.1.9",
     "@llm": "npm:@jeliq/app-sdk-llm@1.1.15",
     "@router": "npm:@jeliq/app-sdk-next-router@2.0.9",
