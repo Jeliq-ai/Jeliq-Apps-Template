@@ -11,6 +11,7 @@ const nextConfig = {
     tsconfigPath: './tsconfig.web.json'
   },
   reactStrictMode: true,
+  swcMinify: false,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
   
     config.resolve.alias = {
