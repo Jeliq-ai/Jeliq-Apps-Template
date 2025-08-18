@@ -1,47 +1,104 @@
-# Jeliq-App-Template
+# Jeliq-Apps-Template
 
-This is a template for a full-stack web application using [Jeliq](https://jeliq.ai/).
+A comprehensive full-stack web application template powered by [Jeliq](https://jeliq.ai/), an AI agent that automates app development designed to accelerate the development of modern web applications. This template and its accompanying SDKs serve as guardrails for AI development, providing a robust foundation with pre-configured authentication, API development, UI component library, and database integration, enabling safe and efficient application feature development.
 
 ## Overview
 
-This template is composed of the following technologies:
-- [Next.js](https://nextjs.org/): Web front-end framework
-- [Supabase](https://supabase.com/): Backend database & user authentication
-- [express-openapi](https://www.npmjs.com/package/express-openapi): Backend API framework
-- [express-openapi-validator](https://www.npmjs.com/package/express-openapi-validator): API request validator
-- [Storybook](https://storybook.js.org/): UI components catalog
-- [Mock Service Worker](https://mswjs.io/): Mocking API responses
+Jeliq-Apps-Template is a template for building scalable web applications in collaboration with AI. Built on the foundation of traditional development best practices, it provides a development environment optimized for AI development.
 
-This template uses the following SDKs to integrate the above technologies seamlessly:
-- [@jeliq/app-sdk-core](https://www.npmjs.com/package/@jeliq/app-sdk-core): Core modules and type definitions
-- [@jeliq/app-sdk-backend-supabase](https://www.npmjs.com/package/@jeliq/app-sdk-backend-supabase): Supabase backend integration modules
-- [@jeliq/app-sdk-next-router](https://www.npmjs.com/package/@jeliq/app-sdk-next-router): Next.js routing integration modules
+### Architecture Highlights
 
-## Setup
+- **Specification/Documentation-first development**: Jeliq's core philosophy of putting specifications and documentation at the center of development, ensuring clear requirements and maintainable code
+- **Type-safe from database to UI**: Full TypeScript support across all layers ensures type safety and excellent developer experience
+- **API-first development**: OpenAPI-driven backend with automatic validation and documentation generation
 
-Prerequisites:
-- Node.js 20.x or higher
-- Docker (to run Supabase locally)
+### Technology Stack
 
-1. Install pnpm globally using npm:
+This template integrates the following best-in-class technologies:
+
+**Frontend Technologies:**
+- [Next.js](https://nextjs.org/): React-based framework with App Router for server-side rendering, static generation, and optimal performance
+- [React](https://react.dev/): UI library with concurrent features and improved rendering performance
+- [Tailwind CSS](https://tailwindcss.com/): Utility-first CSS framework for rapid UI development
+- [Storybook](https://storybook.js.org/): Component development environment for building and testing UI components in isolation
+
+**Backend Technologies:**
+- [Express.js](https://expressjs.com/): Minimalist web framework for Node.js
+- [express-openapi](https://www.npmjs.com/package/express-openapi): OpenAPI 3.0 compliant API framework with automatic routing
+- [express-openapi-validator](https://www.npmjs.com/package/express-openapi-validator): Request/response validation based on OpenAPI specification
+- [Supabase](https://supabase.com/): Open source Firebase alternative providing PostgreSQL database, authentication, and storage
+
+**Development Tools:**
+- [TypeScript](https://www.typescriptlang.org/): Static typing for JavaScript with excellent IDE support
+- [Mock Service Worker (MSW)](https://mswjs.io/): API mocking for development and testing
+- [pnpm](https://pnpm.io/): Fast, disk space efficient package manager
+- [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/): Code quality and formatting tools
+
+### Jeliq SDK Ecosystem
+
+This template leverages Jeliq's powerful SDK ecosystem to provide seamless integration between all technologies:
+
+- **[@jeliq/app-sdk-core](https://www.npmjs.com/package/@jeliq/app-sdk-core)**: Foundation layer providing shared utilities, type definitions, and core abstractions used throughout the application
+- **[@jeliq/app-sdk-backend-supabase](https://www.npmjs.com/package/@jeliq/app-sdk-backend-supabase)**: Simplified Supabase integration with type-safe database queries, authentication helpers, and storage management
+- **[@jeliq/app-sdk-next-router](https://www.npmjs.com/package/@jeliq/app-sdk-next-router)**: Enhanced Next.js routing with automatic route generation, type-safe navigation, and middleware support
+- **[@jeliq/app-sdk-llm](https://www.npmjs.com/package/@jeliq/app-sdk-llm)**: LLM integration utilities for building AI-powered features with support for various providers
+
+## Getting Started
+
+### Prerequisites
+
+Before setting up the project, ensure you have the following installed on your system:
+
+- **Node.js 20.x or higher** - [Download from nodejs.org](https://nodejs.org/)
+- **Docker Desktop** - [Download from docker.com](https://www.docker.com/products/docker-desktop/) (required for running Supabase locally)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <your-repository-url>
+   cd Jeliq-Apps-Template
    ```
-   $ npm install -g pnpm@latest
+
+2. **Install pnpm package manager**
+   ```bash
+   npm install -g pnpm@latest
    ```
 
-2. Install dependencies using pnpm:
-   ```
-   $ pnpm install
+3. **Install project dependencies**
+   ```bash
+   pnpm install
    ```
 
-## Run
+4. **Set up environment variables**
+   ```bash
+   cp .env.example .env
+   ```
+   Edit the `.env` file with your specific configuration values (see [Environment Variables](#environment-variables) section below).
 
-### Run Storybook
+### Initial Setup Verification
+
+After installation, verify your setup by running:
+
+```bash
+# Check if all dependencies are installed correctly
+pnpm --version
+node --version
+docker --version
+
+# Verify project structure
+ls -la
+```
+
+## Running the Application
+
+### Running Storybook
 
 ```
 $ pnpm run:storybook
 ```
 
-### Run Supabase Locally
+### Running Supabase Locally
 
 1. Ensure Docker daemon is running.
 
@@ -68,7 +125,7 @@ $ pnpm run:storybook
    ```
    Verify the migration by accessing [Supabase Studio](http://localhost:54323).
 
-### Build & Run Backend API
+### Building & Running the Backend API
 
 1. Set environment variables:
    ```
@@ -77,17 +134,22 @@ $ pnpm run:storybook
    $ export SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...  # Supabase anon key
    ```
 
-2. Build the API:
+2. Ensure Supabase Storage Buckets Exist
+   ```
+   $ SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9... pnpm ensure-buckets
+   ```
+
+3. Build the API:
    ```
    $ pnpm build:api
    ```
 
-3. Run the API:
+4. Run the API:
    ```
    $ pnpm run:api
    ```
 
-### Build & Run Web Front-end (Next.js)
+### Building & Running the Web Front-end (Next.js)
 
 1. Set environment variable:
    ```
@@ -98,84 +160,38 @@ $ pnpm run:storybook
    ```
    $ pnpm build:web
    ```
-   **Note:** This command automatically generates the Next.js App Router (in `app/`) from the Jeliq routing directory (`src/routing`).
+   **Note:** This command automatically generates the Next.js App Router files (in `app/`) from the Jeliq routing directory (`src/routing`).
 
 3. Run the web:
    ```
    $ pnpm run:web
    ```
 
-## Directory Structure
+## Project Layout
 
 ```
-.
-├── .env.example                  # Environment variables sample
-├── .eslintrc.js                  # ESLint configuration
-├── .gitignore                    # Git ignore file
-├── .prettierrc                   # Prettier configuration
-├── next-env.d.ts                 # Next.js type declarations
-├── next.config.js                # Next.js configuration
-├── package.json                  # Project manifest
-├── pnpm-lock.yaml                # Dependency lock file
-├── postcss.config.js             # PostCSS configuration
-├── tailwind.config.js            # Tailwind CSS configuration
-├── tsconfig.api.json             # TypeScript configuration for API
-├── tsconfig.json                 # Shared TypeScript configuration
-├── tsconfig.web.json             # TypeScript configuration for web
-├── vite.config.mjs               # Vite configuration
-├── .storybook/                   # Storybook configuration
-│   └── preview.ts
-├── README.md                     # Project README
-├── api/                          # API directory
-│   ├── index.ts                  # API entry point
-│   ├── nodemon.json              # Nodemon configuration
-│   └── openapi-config.json       # OpenAPI configuration
-├── app/                          # Next.js app directory (auto-generated from routing)
-├── docs/                         # Documentation files
-│   ├── components/               # Component specifications
-│   ├── data/                     # Data model specifications
-│   ├── locales/                  # Locale specifications
-│   ├── routes/                   # Route specifications
-│   ├── routing/                  # Routing specifications
-│   └── themeColors/              # Theme color specifications
-├── public/                       # Public assets
-├── src/                          # Source code
-│   ├── components/               # React components
-│   │   └── (ComponentName)/      
-│   │       ├── index.tsx         
-│   │       ├── index.stories.tsx 
-│   │       ├── useViewModel.tsx  
-│   │       └── view.tsx          
-│   ├── config/
-│   │   └── themeColors.ts        # Theme colors definition
-│   ├── domain/                   # Domain logic
-│   │   ├── entities/             # Domain entities
-│   │   └── repositories/         # Domain repositories
-│   ├── infra/                    # Infrastructure layer
-│   │   ├── api/                  
-│   │   └── repositories/         
-│   ├── locales/                  # Internationalization files
-│   │   └── (locale-name).ts      
-│   ├── routing/                  # Routing configuration
-│   │   ├── config.ts             
-│   │   ├── routes.ts             
-│   │   └── (RoutingName)/        
-│   │       ├── layouts/          
-│   │       │   └── (LayoutName).ts
-│   │       ├── routes/           
-│   │       │   └── (RouteName)/   
-│   │       │       ├── index.ts   
-│   │       │       └── index.stories.tsx
-│   │       └── config.ts         
-│   ├── services/                 # Service layer
-│   └── usecases/                 # Business use cases
-├── supabase/                     # Supabase directory
-│   ├── migrations/              
-│   ├── config.toml              
-│   └── seed.sql                 
-└── web/                         # Web front-end (Next.js)
-    └── Providers.tsx            
+├── api/                    # Backend API (Express + OpenAPI)
+├── app/                    # Next.js App Router (auto-generated)
+├── docs/                   # Project documentation
+├── public/                 # Static assets
+├── src/                    # Source code
+│   ├── components/         # React components with Storybook
+│   ├── domain/             # Business logic and entities
+│   ├── infra/              # External services integration
+│   ├── locales/            # i18n translations
+│   ├── routing/            # Page routing configuration
+│   ├── services/           # Application services
+│   └── usecases/           # Business use cases
+├── supabase/               # Database schema and migrations
+└── web/                    # Next.js configuration
 ```
+
+### Key Configuration Files
+- `package.json` - Dependencies and scripts
+- `tsconfig.*.json` - TypeScript configurations
+- `.env.example` - Environment variables template
+- `next.config.js` - Next.js settings
+- `tailwind.config.js` - Tailwind CSS settings
 
 ## License
 
