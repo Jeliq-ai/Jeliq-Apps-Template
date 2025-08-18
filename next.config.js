@@ -11,6 +11,7 @@ const nextConfig = {
     tsconfigPath: './tsconfig.web.json'
   },
   reactStrictMode: true,
+  swcMinify: false,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
   
     config.resolve.alias = {
@@ -42,8 +43,7 @@ const nextConfig = {
                   }
                 }],
                 "@babel/preset-react",
-                "@babel/preset-typescript",
-                'module:metro-react-native-babel-preset'
+                "@babel/preset-typescript"
               ],
               plugins: [
                 ['react-native-web'],

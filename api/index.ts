@@ -17,7 +17,7 @@ const apiSpec = generateExpressOpenAPIDoc(apiDoc);
 
 const app = express();
 app.use(cookieParser());
-app.use(express.json());
+app.use(express.json({ limit: process?.env?.REQUEST_BODY_LIMIT || '50mb' }));
 app.use(cors());
 app.use(
 	OpenApiValidator.middleware({
@@ -30,7 +30,7 @@ app.use(
 	}),
 );
 
-const PORT = process?.env?.PORT || 6000;
+const PORT = process?.env?.API_PORT || process?.env?.PORT || 6000;
 app.listen(PORT, () => {
 	console.log("Start on port " + PORT);
 });

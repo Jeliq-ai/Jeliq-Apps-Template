@@ -1,6 +1,6 @@
 /* eslint-disable */
 // @ts-nocheck
-import { api } from "@core";
+import { api } from '@core';
 
 const injectedRtkApi = api.injectEndpoints({
   endpoints: (build) => ({}),
