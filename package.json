@@ -32,8 +32,8 @@
   },
   "dependencies": {
     "@backend": "npm:@jeliq/app-sdk-backend-supabase@2.0.18",
-    "@core": "npm:@jeliq/app-sdk-core@2.1.10",
-    "@llm": "npm:@jeliq/app-sdk-llm@1.1.17",
+    "@core": "npm:@jeliq/app-sdk-core@2.1.11",
+    "@llm": "npm:@jeliq/app-sdk-llm@1.1.18",
     "@router": "npm:@jeliq/app-sdk-next-router@2.0.11",
     "@vitejs/plugin-react-swc": "^3.9.0",
     "autoprefixer": "^10.4.20",
@@ -56,7 +56,7 @@
     "recharts": "^3.0.0",
     "tailwindcss": "^3.4.13",
     "uuid": "^10.0.0",
-    "zod": "^3.24.2"
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.25.4",
