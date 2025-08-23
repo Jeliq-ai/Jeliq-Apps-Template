@@ -31,7 +31,7 @@
     "run:api": "node dist/api/api/index.js"
   },
   "dependencies": {
-    "@backend": "npm:@jeliq/app-sdk-backend-supabase@2.0.18",
+    "@backend": "npm:@jeliq/app-sdk-backend-supabase@2.0.19",
     "@core": "npm:@jeliq/app-sdk-core@2.1.11",
     "@llm": "npm:@jeliq/app-sdk-llm@1.1.18",
     "@router": "npm:@jeliq/app-sdk-next-router@2.0.11",
