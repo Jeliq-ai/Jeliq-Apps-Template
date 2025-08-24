@@ -10,3 +10,4 @@ dist/
 .DS_Store
 src/infra/api/schema/docs.html
 __screenshots__
+pnpm-workspace.yaml

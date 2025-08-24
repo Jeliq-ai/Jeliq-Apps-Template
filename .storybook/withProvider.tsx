@@ -1,5 +1,15 @@
 import React from 'react';
-import { RoutingConfig, AppContextProvider, UIProvider, NavigationProvider, APIClientProvider, AuthProvider, IframeControllerProvider } from '@core';
+import {
+  RoutingConfig,
+  AppContextProvider,
+  UIProvider,
+  NavigationProvider,
+  APIClientProvider,
+  AuthProvider,
+  IframeControllerProvider,
+  PrimitiveWrapper,
+  ClickProvider,
+} from '@core';
 import locales from '../src/locales';
 import * as dataModels from '../src/domain/entities/config';
 import * as routings from '../src/routing/config';
@@ -26,21 +36,31 @@ export const appConfig: RoutingConfig = {
       ],
     },
   ],
-  mainRouteID: "home",
+  mainRouteID: 'home',
 };
 
 export default function withBackendProvider(Story, context) {
   return (
     <APIClientProvider>
-      <AppContextProvider 
+      <AppContextProvider
         routing={routings?.[Object.keys(routings)?.[0]]}
         dataModels={dataModels}
-        >
+      >
         <UIProvider locales={locales}>
           <NavigationProvider>
             <IframeControllerProvider>
               <AuthProvider useNavigation={() => null}>
-                <Story {...context} />
+                <ClickProvider>
+                  <PrimitiveWrapper
+                    data-selectable4doubleclick="false"
+                    data-selectable4singleclick="false"
+                    data-testid="rootForWrapper"
+                    componentID={['rootForWrapper']}
+                    id="rootForWrapper"
+                  >
+                    <Story {...context} />
+                  </PrimitiveWrapper>
+                </ClickProvider>
               </AuthProvider>
             </IframeControllerProvider>
           </NavigationProvider>

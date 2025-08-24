@@ -29,7 +29,7 @@
     "metro.config.js",
     "jest.config.js",
     "vite.config.js",
-    "./dist/**/*",
+    "./dist/**/*"
   ],
   "ts-node": {
     "esm": false,
