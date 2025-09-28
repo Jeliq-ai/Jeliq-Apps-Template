@@ -80,7 +80,7 @@ module.exports = [
       'no-unused-vars': 'off',
       'no-undef': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/no-inferrable-types': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       'react/no-children-prop': 'off',
