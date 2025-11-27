@@ -31,10 +31,10 @@
     "run:api": "node dist/api/api/index.js"
   },
   "dependencies": {
-    "@backend": "npm:@jeliq/app-sdk-backend-supabase@2.0.20",
-    "@core": "npm:@jeliq/app-sdk-core@2.1.11",
-    "@llm": "npm:@jeliq/app-sdk-llm@1.1.18",
-    "@router": "npm:@jeliq/app-sdk-next-router@2.0.11",
+    "@backend": "npm:@jeliq/app-sdk-backend-supabase@2.0.25",
+    "@core": "npm:@jeliq/app-sdk-core@2.1.15",
+    "@llm": "npm:@jeliq/app-sdk-llm@1.1.22",
+    "@router": "npm:@jeliq/app-sdk-next-router@2.0.13",
     "@vitejs/plugin-react-swc": "^3.9.0",
     "autoprefixer": "^10.4.20",
     "body-parser": "^1.20.3",
