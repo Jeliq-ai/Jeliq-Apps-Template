@@ -10,17 +10,17 @@ overrides:
 
 dependencies:
   '@backend':
-    specifier: npm:@jeliq/app-sdk-backend-supabase@2.0.18
-    version: /@jeliq/app-sdk-backend-supabase@2.0.18(@jeliq/app-sdk-core@2.1.10)
+    specifier: npm:@jeliq/app-sdk-backend-supabase@^2.0.25
+    version: /@jeliq/app-sdk-backend-supabase@2.0.25(@jeliq/app-sdk-core@2.1.17)
   '@core':
-    specifier: npm:@jeliq/app-sdk-core@2.1.11
-    version: /@jeliq/app-sdk-core@2.1.11(@jeliq/app-sdk-llm@1.1.17)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
+    specifier: npm:@jeliq/app-sdk-core@^2.1.17
+    version: /@jeliq/app-sdk-core@2.1.17(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
   '@llm':
-    specifier: npm:@jeliq/app-sdk-llm@1.1.18
-    version: /@jeliq/app-sdk-llm@1.1.18(@jeliq/app-sdk-core@2.1.10)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76)
+    specifier: npm:@jeliq/app-sdk-llm@^1.1.21
+    version: /@jeliq/app-sdk-llm@1.1.22(@jeliq/app-sdk-core@2.1.17)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76)
   '@router':
-    specifier: npm:@jeliq/app-sdk-next-router@2.0.11
-    version: /@jeliq/app-sdk-next-router@2.0.11(@jeliq/app-sdk-core@2.1.10)(@swc/core@1.9.2)(@types/node@24.3.0)(next@14.2.18)(react@18.3.1)(typescript@5.6.3)
+    specifier: npm:@jeliq/app-sdk-next-router@^2.0.15
+    version: /@jeliq/app-sdk-next-router@2.0.15(@jeliq/app-sdk-core@2.1.17)(@swc/core@1.9.2)(@types/node@24.3.0)(next@14.2.18)(react@18.3.1)(typescript@5.6.3)
   '@vitejs/plugin-react-swc':
     specifier: ^3.9.0
     version: 3.10.2(vite@5.4.11)
@@ -225,9 +225,17 @@ packages:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  /@anthropic-ai/sdk@0.56.0:
-    resolution: {integrity: sha512-SLCB8M8+VMg1cpCucnA1XWHGWqVSZtIWzmOdDOEu3eTFZMB+A0sGZ1ESO5MHDnqrNTXz3safMrWx9x4rMZSOqA==, tarball: https://registry.npmjs.org/@anthropic-ai/sdk/-/sdk-0.56.0.tgz}
+  /@anthropic-ai/sdk@0.65.0(zod@3.25.76):
+    resolution: {integrity: sha512-zIdPOcrCVEI8t3Di40nH4z9EoeyGZfXbYSvWdDLsB/KkaSYMnEgC7gmcgWu83g2NTn1ZTpbMvpdttWDGGIk6zw==, tarball: https://registry.npmjs.org/@anthropic-ai/sdk/-/sdk-0.65.0.tgz}
     hasBin: true
+    peerDependencies:
+      zod: ^3.25.0 || ^4.0.0
+    peerDependenciesMeta:
+      zod:
+        optional: true
+    dependencies:
+      json-schema-to-ts: 3.1.1
+      zod: 3.25.76
     dev: false
 
   /@apidevtools/json-schema-ref-parser@11.7.2:
@@ -237,97 +245,6 @@ packages:
       '@jsdevtools/ono': 7.1.3
       '@types/json-schema': 7.0.15
       js-yaml: 4.1.0
-    dev: false
-
-  /@azure-rest/core-client@1.4.0:
-    resolution: {integrity: sha512-ozTDPBVUDR5eOnMIwhggbnVmOrka4fXCs8n8mvUo4WLLc38kki6bAOByDoVZZPz/pZy2jMt2kwfpvy/UjALj6w==, tarball: https://registry.npmjs.org/@azure-rest/core-client/-/core-client-1.4.0.tgz}
-    engines: {node: '>=18.0.0'}
-    dependencies:
-      '@azure/abort-controller': 2.1.2
-      '@azure/core-auth': 1.9.0
-      '@azure/core-rest-pipeline': 1.19.1
-      '@azure/core-tracing': 1.2.0
-      '@azure/core-util': 1.11.0
-      tslib: 2.8.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
-  /@azure/abort-controller@2.1.2:
-    resolution: {integrity: sha512-nBrLsEWm4J2u5LpAPjxADTlq3trDgVZZXHNKabeXZtpq3d3AbN/KGO82R87rdDz5/lYB024rtEf10/q0urNgsA==, tarball: https://registry.npmjs.org/@azure/abort-controller/-/abort-controller-2.1.2.tgz}
-    engines: {node: '>=18.0.0'}
-    dependencies:
-      tslib: 2.8.1
-    dev: false
-
-  /@azure/core-auth@1.9.0:
-    resolution: {integrity: sha512-FPwHpZywuyasDSLMqJ6fhbOK3TqUdviZNF8OqRGA4W5Ewib2lEEZ+pBsYcBa88B2NGO/SEnYPGhyBqNlE8ilSw==, tarball: https://registry.npmjs.org/@azure/core-auth/-/core-auth-1.9.0.tgz}
-    engines: {node: '>=18.0.0'}
-    dependencies:
-      '@azure/abort-controller': 2.1.2
-      '@azure/core-util': 1.11.0
-      tslib: 2.8.1
-    dev: false
-
-  /@azure/core-rest-pipeline@1.19.1:
-    resolution: {integrity: sha512-zHeoI3NCs53lLBbWNzQycjnYKsA1CVKlnzSNuSFcUDwBp8HHVObePxrM7HaX+Ha5Ks639H7chNC9HOaIhNS03w==, tarball: https://registry.npmjs.org/@azure/core-rest-pipeline/-/core-rest-pipeline-1.19.1.tgz}
-    engines: {node: '>=18.0.0'}
-    dependencies:
-      '@azure/abort-controller': 2.1.2
-      '@azure/core-auth': 1.9.0
-      '@azure/core-tracing': 1.2.0
-      '@azure/core-util': 1.11.0
-      '@azure/logger': 1.1.4
-      http-proxy-agent: 7.0.2
-      https-proxy-agent: 7.0.5
-      tslib: 2.8.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
-  /@azure/core-sse@2.1.3:
-    resolution: {integrity: sha512-KSSdIKy8kvWCpYr8Hzpu22j3wcXsVTYE0IlgmI1T/aHvBDsLgV91y90UTfVWnuiuApRLCCVC4gS09ApBGOmYQA==, tarball: https://registry.npmjs.org/@azure/core-sse/-/core-sse-2.1.3.tgz}
-    engines: {node: '>=18.0.0'}
-    dependencies:
-      tslib: 2.8.1
-    dev: false
-
-  /@azure/core-tracing@1.2.0:
-    resolution: {integrity: sha512-UKTiEJPkWcESPYJz3X5uKRYyOcJD+4nYph+KpfdPRnQJVrZfk0KJgdnaAWKfhsBBtAf/D58Az4AvCJEmWgIBAg==, tarball: https://registry.npmjs.org/@azure/core-tracing/-/core-tracing-1.2.0.tgz}
-    engines: {node: '>=18.0.0'}
-    dependencies:
-      tslib: 2.8.1
-    dev: false
-
-  /@azure/core-util@1.11.0:
-    resolution: {integrity: sha512-DxOSLua+NdpWoSqULhjDyAZTXFdP/LKkqtYuxxz1SCN289zk3OG8UOpnCQAz/tygyACBtWp/BoO72ptK7msY8g==, tarball: https://registry.npmjs.org/@azure/core-util/-/core-util-1.11.0.tgz}
-    engines: {node: '>=18.0.0'}
-    dependencies:
-      '@azure/abort-controller': 2.1.2
-      tslib: 2.8.1
-    dev: false
-
-  /@azure/logger@1.1.4:
-    resolution: {integrity: sha512-4IXXzcCdLdlXuCG+8UKEwLA1T1NHqUfanhXYHiQTn+6sfWCZXduqbtXDGceg3Ce5QxTGo7EqmbV6Bi+aqKuClQ==, tarball: https://registry.npmjs.org/@azure/logger/-/logger-1.1.4.tgz}
-    engines: {node: '>=18.0.0'}
-    dependencies:
-      tslib: 2.8.1
-    dev: false
-
-  /@azure/openai@1.0.0-beta.11:
-    resolution: {integrity: sha512-OXS27xkG1abiGf5VZUKnkJKr1VCo8+6EUrTGW5aSVjc5COqX8jAUqVAOZsQVCHBdtWYSBULlZkc0ncKMTRQAiQ==, tarball: https://registry.npmjs.org/@azure/openai/-/openai-1.0.0-beta.11.tgz}
-    engines: {node: '>=18.0.0'}
-    deprecated: 'The Azure OpenAI client library for JavaScript beta has been retired. Please migrate to the stable OpenAI SDK for JavaScript using the migration guide: https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/openai/openai/MIGRATION.md.'
-    dependencies:
-      '@azure-rest/core-client': 1.4.0
-      '@azure/core-auth': 1.9.0
-      '@azure/core-rest-pipeline': 1.19.1
-      '@azure/core-sse': 2.1.3
-      '@azure/core-util': 1.11.0
-      '@azure/logger': 1.1.4
-      tslib: 2.8.1
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /@babel/code-frame@7.26.2:
@@ -2567,14 +2484,14 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /@jeliq/app-sdk-backend-supabase@2.0.18(@jeliq/app-sdk-core@2.1.10):
-    resolution: {integrity: sha512-EYmZVn+m6ZSk6LDc3elEAE3PqWIg7pie0hY1UfSZn85Nvx2msKscpq87dKXl5qDA1P87oRDNuqOZIh+s76G3VQ==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-backend-supabase/-/app-sdk-backend-supabase-2.0.18.tgz}
+  /@jeliq/app-sdk-backend-supabase@2.0.25(@jeliq/app-sdk-core@2.1.17):
+    resolution: {integrity: sha512-wkd9BYYCyFAf3rb0nYIgr1ZUEaFj7qD/8Bopviq7KrSMyJnuWP+TDX7cGeTFgwnc1mL5CrGul1AaHGve0ph4VQ==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-backend-supabase/-/app-sdk-backend-supabase-2.0.25.tgz}
     hasBin: true
     requiresBuild: true
     peerDependencies:
       '@jeliq/app-sdk-core': ^2.1.9
     dependencies:
-      '@jeliq/app-sdk-core': 2.1.10(@jeliq/app-sdk-llm@1.1.17)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+      '@jeliq/app-sdk-core': 2.1.17(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
       '@supabase/postgrest-js': 1.21.2
       '@supabase/supabase-js': 2.55.0
       dayjs: 1.11.13
@@ -2589,15 +2506,16 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@jeliq/app-sdk-core@2.1.10(@jeliq/app-sdk-llm@1.1.17)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3):
-    resolution: {integrity: sha512-TrE+OMY0ZJPL9LaM3zaZznKqetf8OeslFJ183SOq7FI0pJX5g5jqEvnE1NPnKLeh7Mi4R8zsZimc7vnTmN23Cw==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-core/-/app-sdk-core-2.1.10.tgz}
+  /@jeliq/app-sdk-core@2.1.17(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76):
+    resolution: {integrity: sha512-5Y9IcxaqZokfYUxxUQV31zw0soU0S2f+xm99+iM81SuvorADTlAefcOI6G8xKRDRrDK2ynnx91zgcKf91kJYFA==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-core/-/app-sdk-core-2.1.17.tgz}
     hasBin: true
     requiresBuild: true
     peerDependencies:
-      '@jeliq/app-sdk-llm': ^1.1.16
+      '@jeliq/app-sdk-llm': ^1.1.21
       react: ^18.3.1
+      zod: '>=3.25.76'
     dependencies:
-      '@jeliq/app-sdk-llm': 1.1.17(@jeliq/app-sdk-core@2.1.10)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)
+      '@jeliq/app-sdk-llm': 1.1.22(@jeliq/app-sdk-core@2.1.17)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76)
       '@reduxjs/toolkit': 2.8.2(react-redux@9.2.0)(react@18.3.1)
       express-openapi: 12.1.3
       js-cookie: 3.0.5
@@ -2613,45 +2531,20 @@ packages:
       - typescript
     dev: false
 
-  /@jeliq/app-sdk-core@2.1.11(@jeliq/app-sdk-llm@1.1.17)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76):
-    resolution: {integrity: sha512-5jb/BfGjAIeUNJWg9a4Q7RztiNFk1j4OGYoz6U8+rzs2+E0oR43uE8AcOVO2wfVfF9B5+GaONIoYOlq9ppi1Gw==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-core/-/app-sdk-core-2.1.11.tgz}
-    hasBin: true
-    requiresBuild: true
-    peerDependencies:
-      '@jeliq/app-sdk-llm': ^1.1.16
-      react: ^18.3.1
-      zod: '>=3.24.2'
-    dependencies:
-      '@jeliq/app-sdk-llm': 1.1.17(@jeliq/app-sdk-core@2.1.10)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)
-      '@reduxjs/toolkit': 2.8.2(react-redux@9.2.0)(react@18.3.1)
-      express-openapi: 12.1.3
-      js-cookie: 3.0.5
-      lodash: 4.17.21
-      msw: 2.10.5(@types/node@24.3.0)(typescript@5.6.3)
-      react: 18.3.1
-      react-redux: 9.2.0(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)
-      zod: 3.25.76
-    transitivePeerDependencies:
-      - '@types/node'
-      - '@types/react'
-      - redux
-      - typescript
-    dev: false
-
-  /@jeliq/app-sdk-llm@1.1.17(@jeliq/app-sdk-core@2.1.10)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3):
-    resolution: {integrity: sha512-eu9YXCJscXigzWi5CGxur1xbyslUzKA0pt7CCRvLAaNoInl1nll6YZg6TdS1LXVyH/S9oiQEZlO59SbMb3Ze9Q==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-llm/-/app-sdk-llm-1.1.17.tgz}
+  /@jeliq/app-sdk-llm@1.1.22(@jeliq/app-sdk-core@2.1.17)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76):
+    resolution: {integrity: sha512-WAAko8l+p/tP7pnlka4dOTnOSqXPvopmpfiW8PO9fdauhqhwIV9nqhKRVas4349pu3UrRgIBi9CV41vmGyBAng==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-llm/-/app-sdk-llm-1.1.22.tgz}
     peerDependencies:
       '@jeliq/app-sdk-core': ^2.1.9
+      zod: '>=3.25.76'
     dependencies:
-      '@jeliq/app-sdk-core': 2.1.10(@jeliq/app-sdk-llm@1.1.17)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
-      '@langchain/anthropic': 0.3.26(@langchain/core@0.3.71)
-      '@langchain/azure-openai': 0.0.11
-      '@langchain/core': 0.3.71
-      '@langchain/google-genai': 0.1.12(@langchain/core@0.3.71)(zod@3.25.76)
-      '@langchain/google-vertexai': 0.1.8(@langchain/core@0.3.71)(zod@3.25.76)
-      '@langchain/openai': 0.4.9(@langchain/core@0.3.71)
+      '@jeliq/app-sdk-core': 2.1.17(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
+      '@langchain/anthropic': 0.3.33(@langchain/core@0.3.79)(zod@3.25.76)
+      '@langchain/core': 0.3.79
+      '@langchain/google-genai': 0.2.18(@langchain/core@0.3.79)
+      '@langchain/google-vertexai': 0.2.18(@langchain/core@0.3.79)
+      '@langchain/openai': 0.6.16(@langchain/core@0.3.79)
       '@langchain/textsplitters': 0.0.3
-      langchain: 0.3.30(@langchain/anthropic@0.3.26)(@langchain/core@0.3.71)(@langchain/google-genai@0.1.12)(@langchain/google-vertexai@0.1.8)
+      langchain: 0.3.36(@langchain/anthropic@0.3.33)(@langchain/core@0.3.79)(@langchain/google-genai@0.2.18)(@langchain/google-vertexai@0.2.18)
       lodash: 4.17.21
       ts-node: 10.9.2(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)
       zod: 3.25.76
@@ -2673,7 +2566,6 @@ packages:
       - '@types/node'
       - axios
       - cheerio
-      - encoding
       - handlebars
       - openai
       - peggy
@@ -2683,62 +2575,16 @@ packages:
       - ws
     dev: false
 
-  /@jeliq/app-sdk-llm@1.1.18(@jeliq/app-sdk-core@2.1.10)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76):
-    resolution: {integrity: sha512-Or+cBGGjFTwGdKoqYroyR27IziUd/L5KHKQE4+VZy0Mty610p35jKetIhygJOahzC96PuE9CAupBDa7QheJdnQ==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-llm/-/app-sdk-llm-1.1.18.tgz}
-    peerDependencies:
-      '@jeliq/app-sdk-core': ^2.1.9
-      zod: '>=3.24.2'
-    dependencies:
-      '@jeliq/app-sdk-core': 2.1.10(@jeliq/app-sdk-llm@1.1.17)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
-      '@langchain/anthropic': 0.3.26(@langchain/core@0.3.71)
-      '@langchain/azure-openai': 0.0.11
-      '@langchain/core': 0.3.71
-      '@langchain/google-genai': 0.1.12(@langchain/core@0.3.71)(zod@3.25.76)
-      '@langchain/google-vertexai': 0.1.8(@langchain/core@0.3.71)(zod@3.25.76)
-      '@langchain/openai': 0.4.9(@langchain/core@0.3.71)
-      '@langchain/textsplitters': 0.0.3
-      langchain: 0.3.30(@langchain/anthropic@0.3.26)(@langchain/core@0.3.71)(@langchain/google-genai@0.1.12)(@langchain/google-vertexai@0.1.8)
-      lodash: 4.17.21
-      ts-node: 10.9.2(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)
-      zod: 3.25.76
-    transitivePeerDependencies:
-      - '@langchain/aws'
-      - '@langchain/cerebras'
-      - '@langchain/cohere'
-      - '@langchain/deepseek'
-      - '@langchain/google-vertexai-web'
-      - '@langchain/groq'
-      - '@langchain/mistralai'
-      - '@langchain/ollama'
-      - '@langchain/xai'
-      - '@opentelemetry/api'
-      - '@opentelemetry/exporter-trace-otlp-proto'
-      - '@opentelemetry/sdk-trace-base'
-      - '@swc/core'
-      - '@swc/wasm'
-      - '@types/node'
-      - axios
-      - cheerio
-      - encoding
-      - handlebars
-      - openai
-      - peggy
-      - supports-color
-      - typeorm
-      - typescript
-      - ws
-    dev: false
-
-  /@jeliq/app-sdk-next-router@2.0.11(@jeliq/app-sdk-core@2.1.10)(@swc/core@1.9.2)(@types/node@24.3.0)(next@14.2.18)(react@18.3.1)(typescript@5.6.3):
-    resolution: {integrity: sha512-GK5ZscWNStDrHAdSMo2SF4OikM5prO2jwGKIXY9tNnJw8hngSQ2WVTtxBz71szXbijiM8BGg+f2Uf3kXwORUrQ==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-next-router/-/app-sdk-next-router-2.0.11.tgz}
+  /@jeliq/app-sdk-next-router@2.0.15(@jeliq/app-sdk-core@2.1.17)(@swc/core@1.9.2)(@types/node@24.3.0)(next@14.2.18)(react@18.3.1)(typescript@5.6.3):
+    resolution: {integrity: sha512-QrHj6lkm/0V7jdySuQAX7L/kkxJcHy5NX4Z8OYYhyAh2JNiXTOVCP2Ds5f0VATxAXM8mwlHSwG3rBHAWlGdFZw==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-next-router/-/app-sdk-next-router-2.0.15.tgz}
     hasBin: true
     requiresBuild: true
     peerDependencies:
-      '@jeliq/app-sdk-core': ^2.1.9
+      '@jeliq/app-sdk-core': ^2.1.17
       next: '>=14.2.31'
       react: ^18.3.1
     dependencies:
-      '@jeliq/app-sdk-core': 2.1.10(@jeliq/app-sdk-llm@1.1.17)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)
+      '@jeliq/app-sdk-core': 2.1.17(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
       lodash: 4.17.21
       next: 14.2.18(@babel/core@7.28.3)(react-dom@18.3.1)(react@18.3.1)
       react: 18.3.1
@@ -3058,30 +2904,17 @@ packages:
     resolution: {integrity: sha512-4JQNk+3mVzK3xh2rqd6RB4J46qUR19azEHBneZyTZM+c456qOrbbM/5xcR8huNCCcbVt7+UmizG6GuUvPvKUYg==, tarball: https://registry.npmjs.org/@jsdevtools/ono/-/ono-7.1.3.tgz}
     dev: false
 
-  /@langchain/anthropic@0.3.26(@langchain/core@0.3.71):
-    resolution: {integrity: sha512-IRCjkxsMx6MZUZmv/aYX5A9RdIduzdR0eeOc4rX8waBcYP7qmtA/CUTNmTtMSoXfOfJY4s3414bkVNBkmS0+5g==, tarball: https://registry.npmjs.org/@langchain/anthropic/-/anthropic-0.3.26.tgz}
+  /@langchain/anthropic@0.3.33(@langchain/core@0.3.79)(zod@3.25.76):
+    resolution: {integrity: sha512-uaMwieUNQbFbu0TQG6Kiub2m7hGcdjQRwniu2RzB4mroUsYCcFThv3MDumEjFMQZW/9P0eyzzTGPXJCNdQUoZg==, tarball: https://registry.npmjs.org/@langchain/anthropic/-/anthropic-0.3.33.tgz}
     engines: {node: '>=18'}
     peerDependencies:
       '@langchain/core': '>=0.3.58 <0.4.0'
     dependencies:
-      '@anthropic-ai/sdk': 0.56.0
-      '@langchain/core': 0.3.71
+      '@anthropic-ai/sdk': 0.65.0(zod@3.25.76)
+      '@langchain/core': 0.3.79
       fast-xml-parser: 4.5.0
-    dev: false
-
-  /@langchain/azure-openai@0.0.11:
-    resolution: {integrity: sha512-DugOrQknXAr1Hi5uLE5pFOzMCSQeR3YJsF4wBlyqUssgqPafzd5Rnvhir/gL5bQQ43HoglUqiL6qhIDDnA3Fug==, tarball: https://registry.npmjs.org/@langchain/azure-openai/-/azure-openai-0.0.11.tgz}
-    engines: {node: '>=18'}
-    dependencies:
-      '@azure/core-auth': 1.9.0
-      '@azure/openai': 1.0.0-beta.11
-      '@langchain/core': 0.2.36
-      js-tiktoken: 1.0.19
-      zod: 3.25.76
-      zod-to-json-schema: 3.20.3(zod@3.25.76)
     transitivePeerDependencies:
-      - openai
-      - supports-color
+      - zod
     dev: false
 
   /@langchain/core@0.2.36:
@@ -3103,8 +2936,8 @@ packages:
       - openai
     dev: false
 
-  /@langchain/core@0.3.71:
-    resolution: {integrity: sha512-ejArFmm/lZ9je2rbMLpkFZnva8jkvDhFCn370WAAVP8akbPOLgDA+S2e5jvj+G/oHraOwmviY8EnxbPXXcDvfw==, tarball: https://registry.npmjs.org/@langchain/core/-/core-0.3.71.tgz}
+  /@langchain/core@0.3.79:
+    resolution: {integrity: sha512-ZLAs5YMM5N2UXN3kExMglltJrKKoW7hs3KMZFlXUnD7a5DFKBYxPFMeXA4rT+uvTxuJRZPCYX0JKI5BhyAWx4A==, tarball: https://registry.npmjs.org/@langchain/core/-/core-0.3.79.tgz}
     engines: {node: '>=18'}
     dependencies:
       '@cfworker/json-schema': 4.1.1
@@ -3112,7 +2945,7 @@ packages:
       camelcase: 6.3.0
       decamelize: 1.2.0
       js-tiktoken: 1.0.19
-      langsmith: 0.3.61
+      langsmith: 0.3.82
       mustache: 4.2.0
       p-queue: 6.6.2
       p-retry: 4.6.2
@@ -3126,74 +2959,63 @@ packages:
       - openai
     dev: false
 
-  /@langchain/google-common@0.1.8(@langchain/core@0.3.71)(zod@3.25.76):
-    resolution: {integrity: sha512-8auqWw2PMPhcHQHS+nMN3tVZrUPgSLckUaFeOHDOeSBiDvBd4KCybPwyl2oCwMDGvmyIxvOOckkMdeGaJ92vpQ==, tarball: https://registry.npmjs.org/@langchain/google-common/-/google-common-0.1.8.tgz}
+  /@langchain/google-common@0.2.18(@langchain/core@0.3.79):
+    resolution: {integrity: sha512-HjWB6Bx4zj7KkiHnqRpx8YNaXdA97sKQMQ17keyWl7nQJlRauNyymm8QGeduKSEfECDr2nGzY8Y/SNY64X6cSA==, tarball: https://registry.npmjs.org/@langchain/google-common/-/google-common-0.2.18.tgz}
     engines: {node: '>=18'}
     peerDependencies:
-      '@langchain/core': '>=0.2.21 <0.4.0'
+      '@langchain/core': '>=0.3.58 <0.4.0'
     dependencies:
-      '@langchain/core': 0.3.71
+      '@langchain/core': 0.3.79
       uuid: 10.0.0
-      zod-to-json-schema: 3.24.5(zod@3.25.76)
-    transitivePeerDependencies:
-      - zod
     dev: false
 
-  /@langchain/google-gauth@0.1.8(@langchain/core@0.3.71)(zod@3.25.76):
-    resolution: {integrity: sha512-2QK7d5SQMrnSv7X4j05BGfO74hiA8FJuNwSsQKZvzlGoVnNXil3x2aqD5V+zsYOPpxhkDCpNlmh2Pue2Wzy1rQ==, tarball: https://registry.npmjs.org/@langchain/google-gauth/-/google-gauth-0.1.8.tgz}
+  /@langchain/google-gauth@0.2.18(@langchain/core@0.3.79):
+    resolution: {integrity: sha512-xof4jBnPB0YI6OlFuETdbODoM05XBTJoC+qQKJ4qNOcWI7u760sRKm57cvG+jzjParojAxdCdrNEKV47wUpoKg==, tarball: https://registry.npmjs.org/@langchain/google-gauth/-/google-gauth-0.2.18.tgz}
     engines: {node: '>=18'}
     peerDependencies:
-      '@langchain/core': '>=0.2.21 <0.4.0'
+      '@langchain/core': '>=0.3.58 <0.4.0'
     dependencies:
-      '@langchain/core': 0.3.71
-      '@langchain/google-common': 0.1.8(@langchain/core@0.3.71)(zod@3.25.76)
-      google-auth-library: 8.9.0
+      '@langchain/core': 0.3.79
+      '@langchain/google-common': 0.2.18(@langchain/core@0.3.79)
+      google-auth-library: 10.5.0
     transitivePeerDependencies:
-      - encoding
       - supports-color
-      - zod
     dev: false
 
-  /@langchain/google-genai@0.1.12(@langchain/core@0.3.71)(zod@3.25.76):
-    resolution: {integrity: sha512-0Ea0E2g63ejCuormVxbuoyJQ5BYN53i2/fb6WP8bMKzyh+y43R13V8JqOtr3e/GmgNyv3ou/VeaZjx7KAvu/0g==, tarball: https://registry.npmjs.org/@langchain/google-genai/-/google-genai-0.1.12.tgz}
+  /@langchain/google-genai@0.2.18(@langchain/core@0.3.79):
+    resolution: {integrity: sha512-m9EiN3VKC01A7/625YQ6Q1Lqq8zueewADX4W5Tcme4RImN75zkg2Z7FYbD1Fo6Zwolc4wBNO6LUtbg3no4rv1Q==, tarball: https://registry.npmjs.org/@langchain/google-genai/-/google-genai-0.2.18.tgz}
     engines: {node: '>=18'}
     peerDependencies:
-      '@langchain/core': '>=0.3.17 <0.4.0'
+      '@langchain/core': '>=0.3.58 <0.4.0'
     dependencies:
       '@google/generative-ai': 0.24.0
-      '@langchain/core': 0.3.71
-      zod-to-json-schema: 3.24.5(zod@3.25.76)
-    transitivePeerDependencies:
-      - zod
+      '@langchain/core': 0.3.79
+      uuid: 11.1.0
     dev: false
 
-  /@langchain/google-vertexai@0.1.8(@langchain/core@0.3.71)(zod@3.25.76):
-    resolution: {integrity: sha512-n06ohihopz38agOm7BTASHMmFLz+XAZlzEvqtPC4Qa1fhYhzETQg2gCzEapIJ1yVk5MhrWqwKnVOQ+tIsFE88Q==, tarball: https://registry.npmjs.org/@langchain/google-vertexai/-/google-vertexai-0.1.8.tgz}
+  /@langchain/google-vertexai@0.2.18(@langchain/core@0.3.79):
+    resolution: {integrity: sha512-oZsOp9Sx4rsFpHH5UiuObo5NYCAqhhmroL3f3pDZ06DB6hpfnNc6XNjdpbmt0AemP6PO/52UlKHeSYtnYlBzIQ==, tarball: https://registry.npmjs.org/@langchain/google-vertexai/-/google-vertexai-0.2.18.tgz}
     engines: {node: '>=18'}
     peerDependencies:
-      '@langchain/core': '>=0.2.21 <0.4.0'
+      '@langchain/core': '>=0.3.58 <0.4.0'
     dependencies:
-      '@langchain/core': 0.3.71
-      '@langchain/google-gauth': 0.1.8(@langchain/core@0.3.71)(zod@3.25.76)
+      '@langchain/core': 0.3.79
+      '@langchain/google-gauth': 0.2.18(@langchain/core@0.3.79)
     transitivePeerDependencies:
-      - encoding
       - supports-color
-      - zod
     dev: false
 
-  /@langchain/openai@0.4.9(@langchain/core@0.3.71):
-    resolution: {integrity: sha512-NAsaionRHNdqaMjVLPkFCyjUDze+OqRHghA1Cn4fPoAafz+FXcl9c7LlEl9Xo0FH6/8yiCl7Rw2t780C/SBVxQ==, tarball: https://registry.npmjs.org/@langchain/openai/-/openai-0.4.9.tgz}
+  /@langchain/openai@0.6.16(@langchain/core@0.3.79):
+    resolution: {integrity: sha512-v9INBOjE0w6ZrUE7kP9UkRyNsV7daH7aPeSOsPEJ35044UI3udPHwNduQ8VmaOUsD26OvSdg1b1GDhrqWLMaRw==, tarball: https://registry.npmjs.org/@langchain/openai/-/openai-0.6.16.tgz}
     engines: {node: '>=18'}
     peerDependencies:
-      '@langchain/core': '>=0.3.39 <0.4.0'
+      '@langchain/core': '>=0.3.68 <0.4.0'
     dependencies:
-      '@langchain/core': 0.3.71
+      '@langchain/core': 0.3.79
       js-tiktoken: 1.0.19
-      openai: 4.91.1(zod@3.25.76)
+      openai: 5.12.2(zod@3.25.76)
       zod: 3.25.76
-      zod-to-json-schema: 3.24.5(zod@3.25.76)
     transitivePeerDependencies:
-      - encoding
       - ws
     dev: false
 
@@ -5014,17 +4836,11 @@ packages:
       '@types/express': 5.0.0
     dev: false
 
-  /@types/node-fetch@2.6.12:
-    resolution: {integrity: sha512-8nneRWKCg3rMtF69nLQJnOYUcbafYeFSjqkw3jCRLsqkWFlHaoQrr5mXmofFGOx3DKn7UfmBMyov8ySvLRVldA==, tarball: https://registry.npmjs.org/@types/node-fetch/-/node-fetch-2.6.12.tgz}
-    dependencies:
-      '@types/node': 24.3.0
-      form-data: 4.0.1
-    dev: false
-
   /@types/node@18.19.64:
     resolution: {integrity: sha512-955mDqvO2vFf/oL7V3WiUtiz+BugyX8uVbaT2H8oj3+8dRyH2FLiNdowe7eNqRM7IOIZvzDH76EoAT+gwm6aIQ==, tarball: https://registry.npmjs.org/@types/node/-/node-18.19.64.tgz}
     dependencies:
       undici-types: 5.26.5
+    dev: true
 
   /@types/node@22.9.1:
     resolution: {integrity: sha512-p8Yy/8sw1caA8CdRIQBG5tiLHmxtQKObCijiAa9Ez+d4+PRffM4054xbju0msf+cvhJpnFEeNjxmVT/0ipktrg==, tarball: https://registry.npmjs.org/@types/node/-/node-22.9.1.tgz}
@@ -5120,7 +4936,7 @@ packages:
   /@types/ws@8.18.1:
     resolution: {integrity: sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==, tarball: https://registry.npmjs.org/@types/ws/-/ws-8.18.1.tgz}
     dependencies:
-      '@types/node': 22.9.1
+      '@types/node': 24.3.0
     dev: false
 
   /@types/yargs-parser@21.0.3:
@@ -5594,13 +5410,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /agentkeepalive@4.6.0:
-    resolution: {integrity: sha512-kja8j7PjmncONqaTsB8fQ+wE2mSU2DJ9D4XKoJ5PFWIdRMa6SLSN1ff4mOr4jCbfRSsxR4keIiySJU0N9T5hIQ==, tarball: https://registry.npmjs.org/agentkeepalive/-/agentkeepalive-4.6.0.tgz}
-    engines: {node: '>= 8.0.0'}
-    dependencies:
-      humanize-ms: 1.2.1
-    dev: false
-
   /aggregate-error@3.1.0:
     resolution: {integrity: sha512-4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA==, tarball: https://registry.npmjs.org/aggregate-error/-/aggregate-error-3.1.0.tgz}
     engines: {node: '>=8'}
@@ -5882,11 +5691,6 @@ packages:
       is-array-buffer: 3.0.5
     dev: true
 
-  /arrify@2.0.1:
-    resolution: {integrity: sha512-3duEwti880xqi4eAMN8AyR4a0ByT90zoYdLlevfrvU43vb0YZwZVfxOgxWrLXXXpyugL0hNZc9G6BiB5B3nUug==, tarball: https://registry.npmjs.org/arrify/-/arrify-2.0.1.tgz}
-    engines: {node: '>=8'}
-    dev: false
-
   /asap@2.0.6:
     resolution: {integrity: sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==, tarball: https://registry.npmjs.org/asap/-/asap-2.0.6.tgz}
     dev: false
@@ -5937,6 +5741,7 @@ packages:
 
   /asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==, tarball: https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz}
+    dev: true
 
   /atob@2.1.2:
     resolution: {integrity: sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==, tarball: https://registry.npmjs.org/atob/-/atob-2.1.2.tgz}
@@ -6628,6 +6433,7 @@ packages:
     engines: {node: '>= 0.8'}
     dependencies:
       delayed-stream: 1.0.0
+    dev: true
 
   /command-exists@1.2.9:
     resolution: {integrity: sha512-LTQ/SGc+s0Xc0Fu5WaKnR0YiygZkm9eKFvyS+fRsU7/ZWFF8ykFM6Pc9aCVf1+xasOOZpO3BAVgVrKvsqKHV7w==, tarball: https://registry.npmjs.org/command-exists/-/command-exists-1.2.9.tgz}
@@ -6934,7 +6740,6 @@ packages:
   /data-uri-to-buffer@4.0.1:
     resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==, tarball: https://registry.npmjs.org/data-uri-to-buffer/-/data-uri-to-buffer-4.0.1.tgz}
     engines: {node: '>= 12'}
-    dev: true
 
   /data-view-buffer@1.0.2:
     resolution: {integrity: sha512-EmKO5V3OLXh1rtK2wgXRansaK1/mtVdTUEiEI0W8RkvgT05kfxaH29PliLnpLP73yYO6142Q72QNa8Wx/A5CqQ==, tarball: https://registry.npmjs.org/data-view-buffer/-/data-view-buffer-1.0.2.tgz}
@@ -7095,6 +6900,7 @@ packages:
   /delayed-stream@1.0.0:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==, tarball: https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz}
     engines: {node: '>=0.4.0'}
+    dev: true
 
   /delegates@1.0.0:
     resolution: {integrity: sha512-bd2L678uiWATM6m5Z1VzNCErI3jiGzt6HGY8OVICs40JQq/HALfbyNJmp0UDakEY4pMMaN0Ly5om/B1VI/+xfQ==, tarball: https://registry.npmjs.org/delegates/-/delegates-1.0.0.tgz}
@@ -7916,10 +7722,6 @@ packages:
     resolution: {integrity: sha512-8dbd3XWoKCTms18ize6JmQF1SFnnfj5s0B7rRry22EofgMu7B6LKHVh+XfFqFGsqnbH54xgeO83PzpKI+ODhlg==, tarball: https://registry.npmjs.org/fast-loops/-/fast-loops-1.1.4.tgz}
     dev: false
 
-  /fast-text-encoding@1.0.6:
-    resolution: {integrity: sha512-VhXlQgj9ioXCqGstD37E/HBeqEGV/qOD/kmbVG8h5xKBYvM1L3lR1Zn4555cQ8GkYbJa8aJSipLPndE1k6zK2w==, tarball: https://registry.npmjs.org/fast-text-encoding/-/fast-text-encoding-1.0.6.tgz}
-    dev: false
-
   /fast-uri@3.0.3:
     resolution: {integrity: sha512-aLrHthzCjH5He4Z2H9YZ+v6Ujb9ocRuW6ZzkJQOrTxleEijANq4v1TsaPaVG1PZcuurEzrLcWRyYBYXD5cEiaw==, tarball: https://registry.npmjs.org/fast-uri/-/fast-uri-3.0.3.tgz}
 
@@ -7970,7 +7772,6 @@ packages:
     dependencies:
       node-domexception: 1.0.0
       web-streams-polyfill: 3.3.3
-    dev: true
 
   /file-entry-cache@8.0.0:
     resolution: {integrity: sha512-XXTUwCvisa5oacNGRP9SfNtYBNAMi+RPwBFmblZEF7N7swHYQS6/Zfk7SRwx4D5j3CH211YNRco1DEMNVfZCnQ==, tarball: https://registry.npmjs.org/file-entry-cache/-/file-entry-cache-8.0.0.tgz}
@@ -8159,10 +7960,6 @@ packages:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
 
-  /form-data-encoder@1.7.2:
-    resolution: {integrity: sha512-qfqtYan3rxrnCk1VYaA4H+Ms9xdpPqvLZa6xmMgFvhO32x7/3J/ExcTd6qpxM0vH2GdMI+poehyBZvqfMTto8A==, tarball: https://registry.npmjs.org/form-data-encoder/-/form-data-encoder-1.7.2.tgz}
-    dev: false
-
   /form-data@4.0.1:
     resolution: {integrity: sha512-tzN8e4TX8+kkxGPK8D5u0FNmjPUjw3lwC9lSLxxoB/+GtsJG91CO8bSWy73APlgAZzZbXEYZJuxjkHH2w+Ezhw==, tarball: https://registry.npmjs.org/form-data/-/form-data-4.0.1.tgz}
     engines: {node: '>= 6'}
@@ -8170,21 +7967,13 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
-
-  /formdata-node@4.4.1:
-    resolution: {integrity: sha512-0iirZp3uVDjVGt9p49aTaqjk84TrglENEDuqfdlZQ1roC9CWlPk6Avf8EEnZNcAqPonwkG35x4n3ww/1THYAeQ==, tarball: https://registry.npmjs.org/formdata-node/-/formdata-node-4.4.1.tgz}
-    engines: {node: '>= 12.20'}
-    dependencies:
-      node-domexception: 1.0.0
-      web-streams-polyfill: 4.0.0-beta.3
-    dev: false
+    dev: true
 
   /formdata-polyfill@4.0.10:
     resolution: {integrity: sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==, tarball: https://registry.npmjs.org/formdata-polyfill/-/formdata-polyfill-4.0.10.tgz}
     engines: {node: '>=12.20.0'}
     dependencies:
       fetch-blob: 3.2.0
-    dev: true
 
   /forwarded@0.2.0:
     resolution: {integrity: sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==, tarball: https://registry.npmjs.org/forwarded/-/forwarded-0.2.0.tgz}
@@ -8310,27 +8099,26 @@ packages:
       wide-align: 1.1.5
     dev: false
 
-  /gaxios@5.1.3:
-    resolution: {integrity: sha512-95hVgBRgEIRQQQHIbnxBXeHbW4TqFk4ZDJW7wmVtvYar72FdhRIo1UGOLS2eRAKCPEdPBWu+M7+A33D9CdX9rA==, tarball: https://registry.npmjs.org/gaxios/-/gaxios-5.1.3.tgz}
-    engines: {node: '>=12'}
+  /gaxios@7.1.3:
+    resolution: {integrity: sha512-YGGyuEdVIjqxkxVH1pUTMY/XtmmsApXrCVv5EU25iX6inEPbV+VakJfLealkBtJN69AQmh1eGOdCl9Sm1UP6XQ==, tarball: https://registry.npmjs.org/gaxios/-/gaxios-7.1.3.tgz}
+    engines: {node: '>=18'}
     dependencies:
       extend: 3.0.2
-      https-proxy-agent: 5.0.1
-      is-stream: 2.0.1
-      node-fetch: 2.7.0
+      https-proxy-agent: 7.0.5
+      node-fetch: 3.3.2
+      rimraf: 5.0.10
     transitivePeerDependencies:
-      - encoding
       - supports-color
     dev: false
 
-  /gcp-metadata@5.3.0:
-    resolution: {integrity: sha512-FNTkdNEnBdlqF2oatizolQqNANMrcqJt6AAYt99B3y1aLLC8Hc5IOBb+ZnnzllodEEf6xMBp6wRcBbc16fa65w==, tarball: https://registry.npmjs.org/gcp-metadata/-/gcp-metadata-5.3.0.tgz}
-    engines: {node: '>=12'}
+  /gcp-metadata@8.1.2:
+    resolution: {integrity: sha512-zV/5HKTfCeKWnxG0Dmrw51hEWFGfcF2xiXqcA3+J90WDuP0SvoiSO5ORvcBsifmx/FoIjgQN3oNOGaQ5PhLFkg==, tarball: https://registry.npmjs.org/gcp-metadata/-/gcp-metadata-8.1.2.tgz}
+    engines: {node: '>=18'}
     dependencies:
-      gaxios: 5.1.3
+      gaxios: 7.1.3
+      google-logging-utils: 1.1.3
       json-bigint: 1.0.0
     transitivePeerDependencies:
-      - encoding
       - supports-color
     dev: false
 
@@ -8524,31 +8312,24 @@ packages:
       slash: 3.0.0
     dev: true
 
-  /google-auth-library@8.9.0:
-    resolution: {integrity: sha512-f7aQCJODJFmYWN6PeNKzgvy9LI2tYmXnzpNDHEjG5sDNPgGb2FXQyTBnXeSH+PAtpKESFD+LmHw3Ox3mN7e1Fg==, tarball: https://registry.npmjs.org/google-auth-library/-/google-auth-library-8.9.0.tgz}
-    engines: {node: '>=12'}
+  /google-auth-library@10.5.0:
+    resolution: {integrity: sha512-7ABviyMOlX5hIVD60YOfHw4/CxOfBhyduaYB+wbFWCWoni4N7SLcV46hrVRktuBbZjFC9ONyqamZITN7q3n32w==, tarball: https://registry.npmjs.org/google-auth-library/-/google-auth-library-10.5.0.tgz}
+    engines: {node: '>=18'}
     dependencies:
-      arrify: 2.0.1
       base64-js: 1.5.1
       ecdsa-sig-formatter: 1.0.11
-      fast-text-encoding: 1.0.6
-      gaxios: 5.1.3
-      gcp-metadata: 5.3.0
-      gtoken: 6.1.2
+      gaxios: 7.1.3
+      gcp-metadata: 8.1.2
+      google-logging-utils: 1.1.3
+      gtoken: 8.0.0
       jws: 4.0.0
-      lru-cache: 6.0.0
     transitivePeerDependencies:
-      - encoding
       - supports-color
     dev: false
 
-  /google-p12-pem@4.0.1:
-    resolution: {integrity: sha512-WPkN4yGtz05WZ5EhtlxNDWPhC4JIic6G8ePitwUWy4l+XPVYec+a0j0Ts47PDtW59y3RwAhUd9/h9ZZ63px6RQ==, tarball: https://registry.npmjs.org/google-p12-pem/-/google-p12-pem-4.0.1.tgz}
-    engines: {node: '>=12.0.0'}
-    deprecated: Package is no longer maintained
-    hasBin: true
-    dependencies:
-      node-forge: 1.3.1
+  /google-logging-utils@1.1.3:
+    resolution: {integrity: sha512-eAmLkjDjAFCVXg7A1unxHsLf961m6y17QFqXqAXGj/gVkKFrEICfStRfwUlGNfeCEjNRa32JEWOUTlYXPyyKvA==, tarball: https://registry.npmjs.org/google-logging-utils/-/google-logging-utils-1.1.3.tgz}
+    engines: {node: '>=14'}
     dev: false
 
   /gopd@1.0.1:
@@ -8572,15 +8353,13 @@ packages:
     resolution: {integrity: sha512-GGTKBX4SD7Wdb8mqeDLni2oaRGYQWjWHGKPQ24ZMnUtKfcsVoiv4uX8+LJr1K6U5VW2Lu1BwJnj7uiori0YtRw==, tarball: https://registry.npmjs.org/graphql/-/graphql-16.9.0.tgz}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
 
-  /gtoken@6.1.2:
-    resolution: {integrity: sha512-4ccGpzz7YAr7lxrT2neugmXQ3hP9ho2gcaityLVkiUecAiwiy60Ii8gRbZeOsXV19fYaRjgBSshs8kXw+NKCPQ==, tarball: https://registry.npmjs.org/gtoken/-/gtoken-6.1.2.tgz}
-    engines: {node: '>=12.0.0'}
+  /gtoken@8.0.0:
+    resolution: {integrity: sha512-+CqsMbHPiSTdtSO14O51eMNlrp9N79gmeqmXeouJOhfucAedHw9noVe/n5uJk3tbKE6a+6ZCQg3RPhVhHByAIw==, tarball: https://registry.npmjs.org/gtoken/-/gtoken-8.0.0.tgz}
+    engines: {node: '>=18'}
     dependencies:
-      gaxios: 5.1.3
-      google-p12-pem: 4.0.1
+      gaxios: 7.1.3
       jws: 4.0.0
     transitivePeerDependencies:
-      - encoding
       - supports-color
     dev: false
 
@@ -8763,16 +8542,6 @@ packages:
       statuses: 2.0.1
       toidentifier: 1.0.1
 
-  /http-proxy-agent@7.0.2:
-    resolution: {integrity: sha512-T1gkAiYYDWYx3V5Bmyu7HcfcvL7mUrTWiM6yOfa3PIphViJ/gFPbvidQ+veqSOHci/PxBcDabeUNCzpOODJZig==, tarball: https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-7.0.2.tgz}
-    engines: {node: '>= 14'}
-    dependencies:
-      agent-base: 7.1.1
-      debug: 4.4.1(supports-color@5.5.0)
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
   /https-proxy-agent@5.0.1:
     resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==, tarball: https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz}
     engines: {node: '>= 6'}
@@ -8794,12 +8563,6 @@ packages:
   /human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==, tarball: https://registry.npmjs.org/human-signals/-/human-signals-2.1.0.tgz}
     engines: {node: '>=10.17.0'}
-
-  /humanize-ms@1.2.1:
-    resolution: {integrity: sha512-Fl70vYtsAFb/C06PTS9dZBo7ihau+Tu/DNCk/OyHhea07S+aeMWpFFkUaXRa8fI+ScZbEI8dfSxwY7gxZ9SAVQ==, tarball: https://registry.npmjs.org/humanize-ms/-/humanize-ms-1.2.1.tgz}
-    dependencies:
-      ms: 2.1.3
-    dev: false
 
   /hyphenate-style-name@1.1.0:
     resolution: {integrity: sha512-WDC/ui2VVRrz3jOVi+XtjqkDjiVjTtFaAGiW37k6b+ohyQ5wYDOGkvCZa8+H0nx3gyvv0+BST9xuOgIyGQ00gw==, tarball: https://registry.npmjs.org/hyphenate-style-name/-/hyphenate-style-name-1.1.0.tgz}
@@ -10059,6 +9822,14 @@ packages:
     resolution: {integrity: sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==, tarball: https://registry.npmjs.org/json-parse-even-better-errors/-/json-parse-even-better-errors-2.3.1.tgz}
     dev: true
 
+  /json-schema-to-ts@3.1.1:
+    resolution: {integrity: sha512-+DWg8jCJG2TEnpy7kOm/7/AxaYoaRbjVB4LFZLySZlWn8exGs3A4OLJR966cVvU26N7X9TWxl+Jsw7dzAqKT6g==, tarball: https://registry.npmjs.org/json-schema-to-ts/-/json-schema-to-ts-3.1.1.tgz}
+    engines: {node: '>=16'}
+    dependencies:
+      '@babel/runtime': 7.26.0
+      ts-algebra: 2.0.0
+    dev: false
+
   /json-schema-traverse@0.4.1:
     resolution: {integrity: sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==, tarball: https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz}
     dev: true
@@ -10169,8 +9940,8 @@ packages:
       zlibjs: 0.3.1
     dev: false
 
-  /langchain@0.3.30(@langchain/anthropic@0.3.26)(@langchain/core@0.3.71)(@langchain/google-genai@0.1.12)(@langchain/google-vertexai@0.1.8):
-    resolution: {integrity: sha512-UyVsfwHDpHbrnWrjWuhJHqi8Non+Zcsf2kdpDTqyJF8NXrHBOpjdHT5LvPuW9fnE7miDTWf5mLcrWAGZgcrznQ==, tarball: https://registry.npmjs.org/langchain/-/langchain-0.3.30.tgz}
+  /langchain@0.3.36(@langchain/anthropic@0.3.33)(@langchain/core@0.3.79)(@langchain/google-genai@0.2.18)(@langchain/google-vertexai@0.2.18):
+    resolution: {integrity: sha512-PqC19KChFF0QlTtYDFgfEbIg+SCnCXox29G8tY62QWfj9bOW7ew2kgWmPw5qoHLOTKOdQPvXET20/1Pdq8vAtQ==, tarball: https://registry.npmjs.org/langchain/-/langchain-0.3.36.tgz}
     engines: {node: '>=18'}
     peerDependencies:
       '@langchain/anthropic': '*'
@@ -10227,16 +9998,16 @@ packages:
       typeorm:
         optional: true
     dependencies:
-      '@langchain/anthropic': 0.3.26(@langchain/core@0.3.71)
-      '@langchain/core': 0.3.71
-      '@langchain/google-genai': 0.1.12(@langchain/core@0.3.71)(zod@3.25.76)
-      '@langchain/google-vertexai': 0.1.8(@langchain/core@0.3.71)(zod@3.25.76)
-      '@langchain/openai': 0.4.9(@langchain/core@0.3.71)
+      '@langchain/anthropic': 0.3.33(@langchain/core@0.3.79)(zod@3.25.76)
+      '@langchain/core': 0.3.79
+      '@langchain/google-genai': 0.2.18(@langchain/core@0.3.79)
+      '@langchain/google-vertexai': 0.2.18(@langchain/core@0.3.79)
+      '@langchain/openai': 0.6.16(@langchain/core@0.3.79)
       '@langchain/textsplitters': 0.0.3
       js-tiktoken: 1.0.19
       js-yaml: 4.1.0
       jsonpointer: 5.0.1
-      langsmith: 0.3.61
+      langsmith: 0.3.82
       openapi-types: 12.1.3
       p-retry: 4.6.2
       uuid: 10.0.0
@@ -10246,7 +10017,6 @@ packages:
       - '@opentelemetry/api'
       - '@opentelemetry/exporter-trace-otlp-proto'
       - '@opentelemetry/sdk-trace-base'
-      - encoding
       - openai
       - ws
     dev: false
@@ -10267,8 +10037,8 @@ packages:
       uuid: 10.0.0
     dev: false
 
-  /langsmith@0.3.61:
-    resolution: {integrity: sha512-b7Cpfj3xpWQO41G3xXeG6uzPzBcWfkEo5cK62WOcTqsKCchN2i42z7q45QQrbU6mdLwXp6pjRfnvr7wFu+Y5iQ==, tarball: https://registry.npmjs.org/langsmith/-/langsmith-0.3.61.tgz}
+  /langsmith@0.3.82:
+    resolution: {integrity: sha512-RTcxtRm0zp2lV+pMesMW7EZSsIlqN7OmR2F6sZ/sOFQwmcLVl+VErMPV4VkX4Sycs4/EIAFT5hpr36EqiHoikQ==, tarball: https://registry.npmjs.org/langsmith/-/langsmith-0.3.82.tgz}
     peerDependencies:
       '@opentelemetry/api': '*'
       '@opentelemetry/exporter-trace-otlp-proto': '*'
@@ -10288,7 +10058,6 @@ packages:
       chalk: 4.1.2
       console-table-printer: 2.12.1
       p-queue: 6.6.2
-      p-retry: 4.6.2
       semver: 7.7.2
       uuid: 10.0.0
     dev: false
@@ -10423,13 +10192,6 @@ packages:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==, tarball: https://registry.npmjs.org/lru-cache/-/lru-cache-5.1.1.tgz}
     dependencies:
       yallist: 3.1.1
-
-  /lru-cache@6.0.0:
-    resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==, tarball: https://registry.npmjs.org/lru-cache/-/lru-cache-6.0.0.tgz}
-    engines: {node: '>=10'}
-    dependencies:
-      yallist: 4.0.0
-    dev: false
 
   /lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==, tarball: https://registry.npmjs.org/lz-string/-/lz-string-1.5.0.tgz}
@@ -11152,12 +10914,6 @@ packages:
       data-uri-to-buffer: 4.0.1
       fetch-blob: 3.2.0
       formdata-polyfill: 4.0.10
-    dev: true
-
-  /node-forge@1.3.1:
-    resolution: {integrity: sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==, tarball: https://registry.npmjs.org/node-forge/-/node-forge-1.3.1.tgz}
-    engines: {node: '>= 6.13.0'}
-    dev: false
 
   /node-int64@0.4.0:
     resolution: {integrity: sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw==, tarball: https://registry.npmjs.org/node-int64/-/node-int64-0.4.0.tgz}
@@ -11441,8 +11197,8 @@ packages:
       is-wsl: 2.2.0
     dev: true
 
-  /openai@4.91.1(zod@3.25.76):
-    resolution: {integrity: sha512-DbjrR0hIMQFbxz8+3qBsfPJnh3+I/skPgoSlT7f9eiZuhGBUissPQULNgx6gHNkLoZ3uS0uYS6eXPUdtg4nHzw==, tarball: https://registry.npmjs.org/openai/-/openai-4.91.1.tgz}
+  /openai@5.12.2(zod@3.25.76):
+    resolution: {integrity: sha512-xqzHHQch5Tws5PcKR2xsZGX9xtch+JQFz5zb14dGqlshmmDAFBFEWmeIpf7wVqWV+w7Emj7jRgkNJakyKE0tYQ==, tarball: https://registry.npmjs.org/openai/-/openai-5.12.2.tgz}
     hasBin: true
     peerDependencies:
       ws: ^8.18.0
@@ -11453,16 +11209,7 @@ packages:
       zod:
         optional: true
     dependencies:
-      '@types/node': 18.19.64
-      '@types/node-fetch': 2.6.12
-      abort-controller: 3.0.0
-      agentkeepalive: 4.6.0
-      form-data-encoder: 1.7.2
-      formdata-node: 4.4.1
-      node-fetch: 2.7.0
       zod: 3.25.76
-    transitivePeerDependencies:
-      - encoding
     dev: false
 
   /openapi-default-setter@12.1.3:
@@ -12728,7 +12475,6 @@ packages:
     hasBin: true
     dependencies:
       glob: 10.4.5
-    dev: true
 
   /rollup@2.79.2:
     resolution: {integrity: sha512-fS6iqSPZDs3dr/y7Od6y5nha8dW1YnbgtsyotCVvoFGKbERG++CVRFv1meyGDE1SNItQA8BrnCw7ScdAhRJ3XQ==, tarball: https://registry.npmjs.org/rollup/-/rollup-2.79.2.tgz}
@@ -13778,6 +13524,10 @@ packages:
       utf8-byte-length: 1.0.5
     dev: true
 
+  /ts-algebra@2.0.0:
+    resolution: {integrity: sha512-FPAhNPFMrkwz76P7cdjdmiShwMynZYN6SgOujD1urY4oNm80Ou9oMdmbR45LotcKOXoy7wSmHkRFE6Mxbrhefw==, tarball: https://registry.npmjs.org/ts-algebra/-/ts-algebra-2.0.0.tgz}
+    dev: false
+
   /ts-api-utils@2.1.0(typescript@5.6.3):
     resolution: {integrity: sha512-CUgTZL1irw8u29bzrOD/nH85jqyc74D6SshFgujOIA7osm2Rz7dYH77agkx7H4FBNxDq7Cjf+IjaX/8zwFW+ZQ==, tarball: https://registry.npmjs.org/ts-api-utils/-/ts-api-utils-2.1.0.tgz}
     engines: {node: '>=18.12'}
@@ -13991,6 +13741,7 @@ packages:
 
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==, tarball: https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz}
+    dev: true
 
   /undici-types@6.19.8:
     resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==, tarball: https://registry.npmjs.org/undici-types/-/undici-types-6.19.8.tgz}
@@ -14166,6 +13917,11 @@ packages:
     hasBin: true
     dev: false
 
+  /uuid@11.1.0:
+    resolution: {integrity: sha512-0/A9rDy9P7cJ+8w1c9WD9V//9Wj15Ce2MPz8Ri6032usz+NfePxx5AcN3bN+r6ZL6jEo066/yNYB3tn4pQEx+A==, tarball: https://registry.npmjs.org/uuid/-/uuid-11.1.0.tgz}
+    hasBin: true
+    dev: false
+
   /uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==, tarball: https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz}
     hasBin: true
@@ -14301,12 +14057,6 @@ packages:
   /web-streams-polyfill@3.3.3:
     resolution: {integrity: sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==, tarball: https://registry.npmjs.org/web-streams-polyfill/-/web-streams-polyfill-3.3.3.tgz}
     engines: {node: '>= 8'}
-    dev: true
-
-  /web-streams-polyfill@4.0.0-beta.3:
-    resolution: {integrity: sha512-QW95TCTaHmsYfHDybGMwO5IJIM93I/6vTRk+daHTWFPhwh+C8Cg7j7XyKrwrj8Ib6vYXe0ocYNrmzY4xAAN6ug==, tarball: https://registry.npmjs.org/web-streams-polyfill/-/web-streams-polyfill-4.0.0-beta.3.tgz}
-    engines: {node: '>= 14'}
-    dev: false
 
   /webidl-conversions@3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==, tarball: https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz}
@@ -14692,14 +14442,6 @@ packages:
 
   /zlibjs@0.3.1:
     resolution: {integrity: sha512-+J9RrgTKOmlxFSDHo0pI1xM6BLVUv+o0ZT9ANtCxGkjIVCCUdx9alUF8Gm+dGLKbkkkidWIHFDZHDMpfITt4+w==, tarball: https://registry.npmjs.org/zlibjs/-/zlibjs-0.3.1.tgz}
-    dev: false
-
-  /zod-to-json-schema@3.20.3(zod@3.25.76):
-    resolution: {integrity: sha512-/Q3wnyxAfCt94ZcrGiXXoiAfRqasxl9CX64LZ9fj+4dKH68zulUtU0uk1WMxQPfAxQ0ZI70dKzcoW7hHj+DwSQ==, tarball: https://registry.npmjs.org/zod-to-json-schema/-/zod-to-json-schema-3.20.3.tgz}
-    peerDependencies:
-      zod: ^3.20.0
-    dependencies:
-      zod: 3.25.76
     dev: false
 
   /zod-to-json-schema@3.24.5(zod@3.25.76):
