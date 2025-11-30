@@ -14,6 +14,15 @@ const nextConfig = {
   swcMinify: false,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
   
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        net: false,
+        tls: false,
+        fs: false,
+      };
+    }
+
     config.resolve.alias = {
       ...config.resolve.alias,
       '@/src': path.resolve(__dirname, './src'),

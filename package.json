@@ -31,9 +31,9 @@
     "run:api": "node dist/api/api/index.js"
   },
   "dependencies": {
-    "@backend": "npm:@jeliq/app-sdk-backend-supabase@^2.0.25",
-    "@core": "npm:@jeliq/app-sdk-core@^2.1.17",
-    "@llm": "npm:@jeliq/app-sdk-llm@^1.1.21",
+    "@backend": "npm:@jeliq/app-sdk-backend-supabase@^2.0.27",
+    "@core": "npm:@jeliq/app-sdk-core@^2.1.19",
+    "@llm": "npm:@jeliq/app-sdk-llm@^1.1.22",
     "@router": "npm:@jeliq/app-sdk-next-router@^2.0.15",
     "@vitejs/plugin-react-swc": "^3.9.0",
     "autoprefixer": "^10.4.20",
@@ -52,6 +52,7 @@
     "react-native-web": "^0.19.12",
     "react-qr-code": "^2.0.16",
     "react-qr-reader": "3.0.0-beta-1",
+    "react-toastify": "^11.0.5",
     "react-webcam": "^7.2.0",
     "recharts": "^3.0.0",
     "tailwindcss": "^3.4.13",

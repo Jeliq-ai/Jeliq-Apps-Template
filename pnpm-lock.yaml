@@ -10,17 +10,17 @@ overrides:
 
 dependencies:
   '@backend':
-    specifier: npm:@jeliq/app-sdk-backend-supabase@^2.0.25
-    version: /@jeliq/app-sdk-backend-supabase@2.0.25(@jeliq/app-sdk-core@2.1.17)
+    specifier: npm:@jeliq/app-sdk-backend-supabase@^2.0.27
+    version: /@jeliq/app-sdk-backend-supabase@2.0.27(@jeliq/app-sdk-core@2.1.19)
   '@core':
-    specifier: npm:@jeliq/app-sdk-core@^2.1.17
-    version: /@jeliq/app-sdk-core@2.1.17(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
+    specifier: npm:@jeliq/app-sdk-core@^2.1.19
+    version: /@jeliq/app-sdk-core@2.1.19(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
   '@llm':
-    specifier: npm:@jeliq/app-sdk-llm@^1.1.21
-    version: /@jeliq/app-sdk-llm@1.1.22(@jeliq/app-sdk-core@2.1.17)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76)
+    specifier: npm:@jeliq/app-sdk-llm@^1.1.22
+    version: /@jeliq/app-sdk-llm@1.1.22(@jeliq/app-sdk-core@2.1.19)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76)
   '@router':
     specifier: npm:@jeliq/app-sdk-next-router@^2.0.15
-    version: /@jeliq/app-sdk-next-router@2.0.15(@jeliq/app-sdk-core@2.1.17)(@swc/core@1.9.2)(@types/node@24.3.0)(next@14.2.18)(react@18.3.1)(typescript@5.6.3)
+    version: /@jeliq/app-sdk-next-router@2.0.15(@jeliq/app-sdk-core@2.1.19)(@swc/core@1.9.2)(@types/node@24.3.0)(next@14.2.18)(react@18.3.1)(typescript@5.6.3)
   '@vitejs/plugin-react-swc':
     specifier: ^3.9.0
     version: 3.10.2(vite@5.4.11)
@@ -72,6 +72,9 @@ dependencies:
   react-qr-reader:
     specifier: 3.0.0-beta-1
     version: 3.0.0-beta-1(react-dom@18.3.1)(react@18.3.1)
+  react-toastify:
+    specifier: ^11.0.5
+    version: 11.0.5(react-dom@18.3.1)(react@18.3.1)
   react-webcam:
     specifier: ^7.2.0
     version: 7.2.0(react-dom@18.3.1)(react@18.3.1)
@@ -2484,14 +2487,14 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /@jeliq/app-sdk-backend-supabase@2.0.25(@jeliq/app-sdk-core@2.1.17):
-    resolution: {integrity: sha512-wkd9BYYCyFAf3rb0nYIgr1ZUEaFj7qD/8Bopviq7KrSMyJnuWP+TDX7cGeTFgwnc1mL5CrGul1AaHGve0ph4VQ==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-backend-supabase/-/app-sdk-backend-supabase-2.0.25.tgz}
+  /@jeliq/app-sdk-backend-supabase@2.0.27(@jeliq/app-sdk-core@2.1.19):
+    resolution: {integrity: sha512-0wUaYhsSXzF+UHDr6z0QUyCzIDvn8Q991uBxLBV5LYf8I6d8FOsIRubEOK5q/KxdVMdOO84uZ4jvjnXxs6fOWQ==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-backend-supabase/-/app-sdk-backend-supabase-2.0.27.tgz}
     hasBin: true
     requiresBuild: true
     peerDependencies:
-      '@jeliq/app-sdk-core': ^2.1.9
+      '@jeliq/app-sdk-core': ^2.1.18
     dependencies:
-      '@jeliq/app-sdk-core': 2.1.17(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
+      '@jeliq/app-sdk-core': 2.1.19(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
       '@supabase/postgrest-js': 1.21.2
       '@supabase/supabase-js': 2.55.0
       dayjs: 1.11.13
@@ -2506,8 +2509,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@jeliq/app-sdk-core@2.1.17(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76):
-    resolution: {integrity: sha512-5Y9IcxaqZokfYUxxUQV31zw0soU0S2f+xm99+iM81SuvorADTlAefcOI6G8xKRDRrDK2ynnx91zgcKf91kJYFA==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-core/-/app-sdk-core-2.1.17.tgz}
+  /@jeliq/app-sdk-core@2.1.19(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76):
+    resolution: {integrity: sha512-YomA6X6Xhbpj0Yy0tQJBDBRXXYNJrWdO8CIZ1cdViwD/riUfC3S8+YX5GREqJOBzpAIZsiT+2W1QfyeCdUhyJQ==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-core/-/app-sdk-core-2.1.19.tgz}
     hasBin: true
     requiresBuild: true
     peerDependencies:
@@ -2515,11 +2518,12 @@ packages:
       react: ^18.3.1
       zod: '>=3.25.76'
     dependencies:
-      '@jeliq/app-sdk-llm': 1.1.22(@jeliq/app-sdk-core@2.1.17)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76)
+      '@jeliq/app-sdk-llm': 1.1.22(@jeliq/app-sdk-core@2.1.19)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76)
       '@reduxjs/toolkit': 2.8.2(react-redux@9.2.0)(react@18.3.1)
       express-openapi: 12.1.3
       js-cookie: 3.0.5
       lodash: 4.17.21
+      log4js: 6.9.1
       msw: 2.10.5(@types/node@24.3.0)(typescript@5.6.3)
       react: 18.3.1
       react-redux: 9.2.0(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)
@@ -2528,16 +2532,17 @@ packages:
       - '@types/node'
       - '@types/react'
       - redux
+      - supports-color
       - typescript
     dev: false
 
-  /@jeliq/app-sdk-llm@1.1.22(@jeliq/app-sdk-core@2.1.17)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76):
+  /@jeliq/app-sdk-llm@1.1.22(@jeliq/app-sdk-core@2.1.19)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76):
     resolution: {integrity: sha512-WAAko8l+p/tP7pnlka4dOTnOSqXPvopmpfiW8PO9fdauhqhwIV9nqhKRVas4349pu3UrRgIBi9CV41vmGyBAng==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-llm/-/app-sdk-llm-1.1.22.tgz}
     peerDependencies:
       '@jeliq/app-sdk-core': ^2.1.9
       zod: '>=3.25.76'
     dependencies:
-      '@jeliq/app-sdk-core': 2.1.17(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
+      '@jeliq/app-sdk-core': 2.1.19(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
       '@langchain/anthropic': 0.3.33(@langchain/core@0.3.79)(zod@3.25.76)
       '@langchain/core': 0.3.79
       '@langchain/google-genai': 0.2.18(@langchain/core@0.3.79)
@@ -2575,7 +2580,7 @@ packages:
       - ws
     dev: false
 
-  /@jeliq/app-sdk-next-router@2.0.15(@jeliq/app-sdk-core@2.1.17)(@swc/core@1.9.2)(@types/node@24.3.0)(next@14.2.18)(react@18.3.1)(typescript@5.6.3):
+  /@jeliq/app-sdk-next-router@2.0.15(@jeliq/app-sdk-core@2.1.19)(@swc/core@1.9.2)(@types/node@24.3.0)(next@14.2.18)(react@18.3.1)(typescript@5.6.3):
     resolution: {integrity: sha512-QrHj6lkm/0V7jdySuQAX7L/kkxJcHy5NX4Z8OYYhyAh2JNiXTOVCP2Ds5f0VATxAXM8mwlHSwG3rBHAWlGdFZw==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-next-router/-/app-sdk-next-router-2.0.15.tgz}
     hasBin: true
     requiresBuild: true
@@ -2584,7 +2589,7 @@ packages:
       next: '>=14.2.31'
       react: ^18.3.1
     dependencies:
-      '@jeliq/app-sdk-core': 2.1.17(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
+      '@jeliq/app-sdk-core': 2.1.19(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
       lodash: 4.17.21
       next: 14.2.18(@babel/core@7.28.3)(react-dom@18.3.1)(react@18.3.1)
       react: 18.3.1
@@ -6768,6 +6773,11 @@ packages:
       is-data-view: 1.0.2
     dev: true
 
+  /date-format@4.0.14:
+    resolution: {integrity: sha512-39BOQLs9ZjKh0/patS9nrT8wc3ioX3/eA/zgbKNopnF2wCqJEoxywwwElATYvRsXdnOxA/OQeQoFZ3rFjVajhg==, tarball: https://registry.npmjs.org/date-format/-/date-format-4.0.14.tgz}
+    engines: {node: '>=4.0'}
+    dev: false
+
   /dayjs@1.11.13:
     resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==, tarball: https://registry.npmjs.org/dayjs/-/dayjs-1.11.13.tgz}
     dev: false
@@ -7906,7 +7916,6 @@ packages:
 
   /flatted@3.3.3:
     resolution: {integrity: sha512-GX+ysw4PBCz0PzosHDepZGANEuFCMLrnRTiEy9McGjmkCQYwRq4A/X786G/fjM/+OjsWSU1ZrY5qyARZmO/uwg==, tarball: https://registry.npmjs.org/flatted/-/flatted-3.3.3.tgz}
-    dev: true
 
   /flow-enums-runtime@0.0.6:
     resolution: {integrity: sha512-3PYnM29RFXwvAN6Pc/scUfkI7RwhQ/xqyLUyPNlXUp9S40zI8nup9tUSrTLSVnWGBN38FNiGWbwZOB6uR4OGdw==, tarball: https://registry.npmjs.org/flow-enums-runtime/-/flow-enums-runtime-0.0.6.tgz}
@@ -10161,6 +10170,19 @@ packages:
       is-unicode-supported: 0.1.0
     dev: false
 
+  /log4js@6.9.1:
+    resolution: {integrity: sha512-1somDdy9sChrr9/f4UlzhdaGfDR2c/SaD2a4T7qEkG4jTS57/B3qmnjLYePwQ8cqWnUHZI0iAKxMBpCZICiZ2g==, tarball: https://registry.npmjs.org/log4js/-/log4js-6.9.1.tgz}
+    engines: {node: '>=8.0'}
+    dependencies:
+      date-format: 4.0.14
+      debug: 4.4.1(supports-color@5.5.0)
+      flatted: 3.3.3
+      rfdc: 1.4.1
+      streamroller: 3.1.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /logkitty@0.7.1:
     resolution: {integrity: sha512-/3ER20CTTbahrCrpYfPn7Xavv9diBROZpoXGVZDWMw4b/X4uuUwAC0ki85tgsdMRONURyIJbcOvS94QsUBYPbQ==, tarball: https://registry.npmjs.org/logkitty/-/logkitty-0.7.1.tgz}
     hasBin: true
@@ -12126,6 +12148,17 @@ packages:
       react-is: 18.3.1
     dev: false
 
+  /react-toastify@11.0.5(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-EpqHBGvnSTtHYhCPLxML05NLY2ZX0JURbAdNYa6BUkk+amz4wbKBQvoKQAB0ardvSarUBuY4Q4s1sluAzZwkmA==, tarball: https://registry.npmjs.org/react-toastify/-/react-toastify-11.0.5.tgz}
+    peerDependencies:
+      react: ^18.3.1
+      react-dom: ^18 || ^19
+    dependencies:
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    dev: false
+
   /react-webcam@7.2.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-xkrzYPqa1ag2DP+2Q/kLKBmCIfEx49bVdgCCCcZf88oF+0NPEbkwYk3/s/C7Zy0mhM8k+hpdNkBLzxg8H0aWcg==, tarball: https://registry.npmjs.org/react-webcam/-/react-webcam-7.2.0.tgz}
     peerDependencies:
@@ -12454,6 +12487,10 @@ packages:
   /reusify@1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==, tarball: https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
+
+  /rfdc@1.4.1:
+    resolution: {integrity: sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA==, tarball: https://registry.npmjs.org/rfdc/-/rfdc-1.4.1.tgz}
+    dev: false
 
   /rimraf@2.6.3:
     resolution: {integrity: sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==, tarball: https://registry.npmjs.org/rimraf/-/rimraf-2.6.3.tgz}
@@ -13016,6 +13053,17 @@ packages:
       - supports-color
       - utf-8-validate
     dev: true
+
+  /streamroller@3.1.5:
+    resolution: {integrity: sha512-KFxaM7XT+irxvdqSP1LGLgNWbYN7ay5owZ3r/8t77p+EtSUAfUgtl7be3xtqtOmGUl9K9YPO2ca8133RlTjvKw==, tarball: https://registry.npmjs.org/streamroller/-/streamroller-3.1.5.tgz}
+    engines: {node: '>=8.0'}
+    dependencies:
+      date-format: 4.0.14
+      debug: 4.4.1(supports-color@5.5.0)
+      fs-extra: 8.1.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
 
   /streamsearch@1.1.0:
     resolution: {integrity: sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==, tarball: https://registry.npmjs.org/streamsearch/-/streamsearch-1.1.0.tgz}
