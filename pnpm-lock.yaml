@@ -10,17 +10,17 @@ overrides:
 
 dependencies:
   '@backend':
-    specifier: npm:@jeliq/app-sdk-backend-supabase@^2.0.27
-    version: /@jeliq/app-sdk-backend-supabase@2.0.27(@jeliq/app-sdk-core@2.1.19)
+    specifier: npm:@jeliq/app-sdk-backend-supabase@^3.0.3
+    version: /@jeliq/app-sdk-backend-supabase@3.0.4(@jeliq/app-sdk-core@3.0.3)
   '@core':
-    specifier: npm:@jeliq/app-sdk-core@^2.1.19
-    version: /@jeliq/app-sdk-core@2.1.19(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
+    specifier: npm:@jeliq/app-sdk-core@^3.0.3
+    version: /@jeliq/app-sdk-core@3.0.3(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
   '@llm':
-    specifier: npm:@jeliq/app-sdk-llm@^1.1.22
-    version: /@jeliq/app-sdk-llm@1.1.22(@jeliq/app-sdk-core@2.1.19)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76)
+    specifier: npm:@jeliq/app-sdk-llm@^1.1.24
+    version: /@jeliq/app-sdk-llm@1.1.24(@jeliq/app-sdk-core@3.0.3)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76)
   '@router':
-    specifier: npm:@jeliq/app-sdk-next-router@^2.0.15
-    version: /@jeliq/app-sdk-next-router@2.0.15(@jeliq/app-sdk-core@2.1.19)(@swc/core@1.9.2)(@types/node@24.3.0)(next@14.2.18)(react@18.3.1)(typescript@5.6.3)
+    specifier: npm:@jeliq/app-sdk-next-router@^2.0.16
+    version: /@jeliq/app-sdk-next-router@2.0.16(@jeliq/app-sdk-core@3.0.3)(@swc/core@1.9.2)(@types/node@24.3.0)(next@14.2.18)(react@18.3.1)(typescript@5.6.3)
   '@vitejs/plugin-react-swc':
     specifier: ^3.9.0
     version: 3.10.2(vite@5.4.11)
@@ -2487,14 +2487,14 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /@jeliq/app-sdk-backend-supabase@2.0.27(@jeliq/app-sdk-core@2.1.19):
-    resolution: {integrity: sha512-0wUaYhsSXzF+UHDr6z0QUyCzIDvn8Q991uBxLBV5LYf8I6d8FOsIRubEOK5q/KxdVMdOO84uZ4jvjnXxs6fOWQ==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-backend-supabase/-/app-sdk-backend-supabase-2.0.27.tgz}
+  /@jeliq/app-sdk-backend-supabase@3.0.4(@jeliq/app-sdk-core@3.0.3):
+    resolution: {integrity: sha512-u5Xno8chtGwIRocVMroj/sVQtswLqPn+6+Ue9saUgwjRKGU0lYJIefMWM7SJJ+y9xTNrrzSM4Dn91vH59clG4w==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-backend-supabase/-/app-sdk-backend-supabase-3.0.4.tgz}
     hasBin: true
     requiresBuild: true
     peerDependencies:
-      '@jeliq/app-sdk-core': ^2.1.18
+      '@jeliq/app-sdk-core': ^3.0.3
     dependencies:
-      '@jeliq/app-sdk-core': 2.1.19(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
+      '@jeliq/app-sdk-core': 3.0.3(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
       '@supabase/postgrest-js': 1.21.2
       '@supabase/supabase-js': 2.55.0
       dayjs: 1.11.13
@@ -2509,8 +2509,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@jeliq/app-sdk-core@2.1.19(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76):
-    resolution: {integrity: sha512-YomA6X6Xhbpj0Yy0tQJBDBRXXYNJrWdO8CIZ1cdViwD/riUfC3S8+YX5GREqJOBzpAIZsiT+2W1QfyeCdUhyJQ==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-core/-/app-sdk-core-2.1.19.tgz}
+  /@jeliq/app-sdk-core@3.0.3(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76):
+    resolution: {integrity: sha512-rsvtCa0JUnmwlqwcYfTHHXqLDIv38eB9Wf6b2NcRUobi0IEisGpvpgy7AxHST/fuDUhdNKedjRrcobmygAd0Ig==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-core/-/app-sdk-core-3.0.3.tgz}
     hasBin: true
     requiresBuild: true
     peerDependencies:
@@ -2518,7 +2518,7 @@ packages:
       react: ^18.3.1
       zod: '>=3.25.76'
     dependencies:
-      '@jeliq/app-sdk-llm': 1.1.22(@jeliq/app-sdk-core@2.1.19)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76)
+      '@jeliq/app-sdk-llm': 1.1.22(@jeliq/app-sdk-core@3.0.3)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76)
       '@reduxjs/toolkit': 2.8.2(react-redux@9.2.0)(react@18.3.1)
       express-openapi: 12.1.3
       js-cookie: 3.0.5
@@ -2536,13 +2536,13 @@ packages:
       - typescript
     dev: false
 
-  /@jeliq/app-sdk-llm@1.1.22(@jeliq/app-sdk-core@2.1.19)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76):
+  /@jeliq/app-sdk-llm@1.1.22(@jeliq/app-sdk-core@3.0.3)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76):
     resolution: {integrity: sha512-WAAko8l+p/tP7pnlka4dOTnOSqXPvopmpfiW8PO9fdauhqhwIV9nqhKRVas4349pu3UrRgIBi9CV41vmGyBAng==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-llm/-/app-sdk-llm-1.1.22.tgz}
     peerDependencies:
       '@jeliq/app-sdk-core': ^2.1.9
       zod: '>=3.25.76'
     dependencies:
-      '@jeliq/app-sdk-core': 2.1.19(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
+      '@jeliq/app-sdk-core': 3.0.3(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
       '@langchain/anthropic': 0.3.33(@langchain/core@0.3.79)(zod@3.25.76)
       '@langchain/core': 0.3.79
       '@langchain/google-genai': 0.2.18(@langchain/core@0.3.79)
@@ -2580,16 +2580,60 @@ packages:
       - ws
     dev: false
 
-  /@jeliq/app-sdk-next-router@2.0.15(@jeliq/app-sdk-core@2.1.19)(@swc/core@1.9.2)(@types/node@24.3.0)(next@14.2.18)(react@18.3.1)(typescript@5.6.3):
-    resolution: {integrity: sha512-QrHj6lkm/0V7jdySuQAX7L/kkxJcHy5NX4Z8OYYhyAh2JNiXTOVCP2Ds5f0VATxAXM8mwlHSwG3rBHAWlGdFZw==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-next-router/-/app-sdk-next-router-2.0.15.tgz}
+  /@jeliq/app-sdk-llm@1.1.24(@jeliq/app-sdk-core@3.0.3)(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)(zod@3.25.76):
+    resolution: {integrity: sha512-OLXhnqMcDcdPstDf39XVxTO6OJgAhwLHULfBvnr7z1xun6Emirr7rbZUm5pKUYi87mT0lqT0x9+PMgYanp1fkg==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-llm/-/app-sdk-llm-1.1.24.tgz}
+    peerDependencies:
+      '@jeliq/app-sdk-core': ^3.0.0
+      zod: '>=3.25.76'
+    dependencies:
+      '@jeliq/app-sdk-core': 3.0.3(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
+      '@langchain/anthropic': 0.3.33(@langchain/core@0.3.79)(zod@3.25.76)
+      '@langchain/core': 0.3.79
+      '@langchain/google-genai': 0.2.18(@langchain/core@0.3.79)
+      '@langchain/google-vertexai': 0.2.18(@langchain/core@0.3.79)
+      '@langchain/openai': 0.6.16(@langchain/core@0.3.79)
+      '@langchain/textsplitters': 0.0.3
+      langchain: 0.3.36(@langchain/anthropic@0.3.33)(@langchain/core@0.3.79)(@langchain/google-genai@0.2.18)(@langchain/google-vertexai@0.2.18)
+      lodash: 4.17.21
+      ts-node: 10.9.2(@swc/core@1.9.2)(@types/node@24.3.0)(typescript@5.6.3)
+      zod: 3.25.76
+    transitivePeerDependencies:
+      - '@langchain/aws'
+      - '@langchain/cerebras'
+      - '@langchain/cohere'
+      - '@langchain/deepseek'
+      - '@langchain/google-vertexai-web'
+      - '@langchain/groq'
+      - '@langchain/mistralai'
+      - '@langchain/ollama'
+      - '@langchain/xai'
+      - '@opentelemetry/api'
+      - '@opentelemetry/exporter-trace-otlp-proto'
+      - '@opentelemetry/sdk-trace-base'
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - axios
+      - cheerio
+      - handlebars
+      - openai
+      - peggy
+      - supports-color
+      - typeorm
+      - typescript
+      - ws
+    dev: false
+
+  /@jeliq/app-sdk-next-router@2.0.16(@jeliq/app-sdk-core@3.0.3)(@swc/core@1.9.2)(@types/node@24.3.0)(next@14.2.18)(react@18.3.1)(typescript@5.6.3):
+    resolution: {integrity: sha512-vAjMMvqAtFcPkKTAMp5ETRkOi+kiMmdP7Ud49TvsAZcfNd8fyY13lNITLHfYMvDdxRqd7CdGXts11sjjgieVGg==, tarball: https://registry.npmjs.org/@jeliq/app-sdk-next-router/-/app-sdk-next-router-2.0.16.tgz}
     hasBin: true
     requiresBuild: true
     peerDependencies:
-      '@jeliq/app-sdk-core': ^2.1.17
+      '@jeliq/app-sdk-core': ^3.0.0
       next: '>=14.2.31'
       react: ^18.3.1
     dependencies:
-      '@jeliq/app-sdk-core': 2.1.19(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
+      '@jeliq/app-sdk-core': 3.0.3(@jeliq/app-sdk-llm@1.1.22)(@types/node@24.3.0)(@types/react@18.3.12)(react@18.3.1)(redux@5.0.1)(typescript@5.6.3)(zod@3.25.76)
       lodash: 4.17.21
       next: 14.2.18(@babel/core@7.28.3)(react-dom@18.3.1)(react@18.3.1)
       react: 18.3.1
