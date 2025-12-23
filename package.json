@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@backend": "npm:@jeliq/app-sdk-backend-supabase@^3.0.3",
-    "@core": "npm:@jeliq/app-sdk-core@^3.0.3",
+    "@core": "npm:@jeliq/app-sdk-core@^3.0.4",
     "@llm": "npm:@jeliq/app-sdk-llm@^1.1.24",
     "@router": "npm:@jeliq/app-sdk-next-router@^2.0.16",
     "@vitejs/plugin-react-swc": "^3.9.0",
