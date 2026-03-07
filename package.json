@@ -32,9 +32,9 @@
   },
   "dependencies": {
     "@backend": "npm:@jeliq/app-sdk-backend-supabase@^3.0.7",
-    "@core": "npm:@jeliq/app-sdk-core@^3.0.6",
-    "@llm": "npm:@jeliq/app-sdk-llm@^1.2.5",
-    "@router": "npm:@jeliq/app-sdk-next-router@^2.0.16",
+    "@core": "npm:@jeliq/app-sdk-core@^3.0.8",
+    "@llm": "npm:@jeliq/app-sdk-llm@^1.2.6",
+    "@router": "npm:@jeliq/app-sdk-next-router@^2.0.17",
     "@vitejs/plugin-react-swc": "^3.11.0",
     "autoprefixer": "^10.4.27",
     "cookie-parser": "^1.4.7",
